@@ -1,0 +1,98 @@
+{
+    "name": "Soulbound",
+    "description": "Your form is bound to a sword, making you spawn and respawn with one. Not holding any kind of sword slowly degrades your body, eventually dealing massive damage.",
+    "type": "origins:multiple",
+    "equipment_spawn": {
+        "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "minecraft:wooden_sword"
+            }
+        ],
+        "recurrent": true
+    },
+    "soul_strength": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 14,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "comparison": "<",
+                "compare_to": 100
+            }
+        }
+    },
+    "soul_sustain": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "fabric:swords"
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "offhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "fabric:swords"
+                            }
+                        }
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "change": 1
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "change": -2
+            }
+        }
+    },
+    "respawn_reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:change_resource",
+            "resource": "underworld_warriors:soulbound_sword_soul_strength",
+            "change": 100
+        }
+    },
+    "form_decay": {
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "damage": 5,
+        "damage_easy": 4,
+        "damage_source": {
+            "name": "wither",
+            "bypasses_armor": true,
+            "magic": true
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld_warriors:soulbound_sword_soul_strength",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    }
+}
