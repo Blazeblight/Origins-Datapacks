@@ -1,5 +1,3 @@
-# Origins-Datapacks
-A list of all datapacks I made for the Origins Mod.
 # Origins Datapacks for 1.16.5
 
 These are datapacks designed for the Origins Mod. Check the releases for the downloadable zip files of the datapacks. 
