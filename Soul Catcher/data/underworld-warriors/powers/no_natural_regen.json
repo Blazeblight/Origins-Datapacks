@@ -1,0 +1,17 @@
+{
+    "name": "No Natural Regeneration",
+    "description": "Due to your highly magical body, your body cannot regenerate through natural means except when in the vicinity of an enchantment table.",
+    "type": "origins:disable_regen",
+    "condition": {
+        "type": "origins:block_in_radius",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "underworld-warriors:enchantment_table"
+        },
+        "radius": 3,
+        "shape": "cube",
+        "comparison": ">=",
+        "compare_to": 1,
+        "inverted": true
+    }
+}

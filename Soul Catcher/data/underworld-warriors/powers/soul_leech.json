@@ -1,0 +1,18 @@
+{
+    "name": "Soul Leech",
+    "description": "You can steal an entity's life force when hitting them with enough strength, increasing your experience points.",
+    "type": "origins:self_action_on_hit",
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">=",
+        "compare_to": 4.0
+    },
+    "entity_action": {
+        "type": "origins:add_xp",
+        "points": 3
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": false
+    }
+}

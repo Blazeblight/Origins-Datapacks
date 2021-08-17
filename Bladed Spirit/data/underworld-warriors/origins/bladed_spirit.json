@@ -1,0 +1,19 @@
+{
+    "name": "Bladed Spirit",
+    "description": "From the soul of a fallen warrior, this honorable spirit has found both respite and form with a familiar weapon.",
+    "icon": "minecraft:iron_sword",
+    "order": 2,
+    "impact": 3,
+    "powers": [
+        "underworld-warriors:soulbound_sword",
+        "underworld-warriors:latent_strength",
+        "underworld-warriors:latent_strength_stone_bonus",
+        "underworld-warriors:latent_strength_iron_bonus",
+        "underworld-warriors:latent_strength_gold_bonus",
+        "underworld-warriors:latent_strength_diamond_bonus",
+        "underworld-warriors:latent_strength_netherite_bonus",
+        "underworld-warriors:soul_body",
+        "underworld-warriors:weak_corporeality",
+        "underworld-warriors:ethereal_form"
+    ]
+}

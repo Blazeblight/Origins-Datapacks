@@ -1,0 +1,28 @@
+{
+    "name": "Ectothermic",
+    "description": "You become slower and have less health in cold biomes.",
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+        {
+            "name": "Less health in cold biomes",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": -0.3
+        },
+        {
+            "name": "Slower in cold biomes",
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.3
+        }
+    ],
+    "tick_rate": 15,
+    "condition": {
+        "type": "origins:biome",
+        "condition": {
+            "type": "origins:temperature",
+            "comparison": "<=",
+            "compare_to": 0.2
+        }
+    }
+}

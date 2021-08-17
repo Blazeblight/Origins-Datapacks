@@ -1,0 +1,8 @@
+{
+    "name": "Fire Immunity",
+    "description": "Your affinity to fire renders you immune to fire damage.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:fire"
+    }
+}

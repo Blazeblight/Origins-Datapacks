@@ -1,0 +1,50 @@
+{
+    "name": "Severe Hydroasthenia",
+    "description": "While water cannot outright kill you, it severely weakens you after a few seconds of contact.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -4,
+    "max_stacks": 30,
+    "duration_per_stack": 10,
+    "effects": [
+        {
+            "effect": "minecraft:weakness",
+            "amplifier": 2,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:blindness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:mining_fatigue",
+            "amplifier": 2,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    }
+}

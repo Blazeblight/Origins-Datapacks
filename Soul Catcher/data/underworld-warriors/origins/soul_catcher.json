@@ -1,0 +1,15 @@
+{
+    "name": "Soul Catcher",
+    "description": "A master of soul manipulation, the Soul Catcher can absorb the lifeforce of living enemies and focus their soul to heal and protect their body from damage.",
+    "powers": [
+        "underworld-warriors:soul_leech",
+        "underworld-warriors:soul_shield",
+        "underworld-warriors:soul_heal",
+        "underworld-warriors:xp_exchange",
+        "underworld-warriors:magical_body",
+        "underworld-warriors:no_natural_regen"
+    ],
+    "icon": "minecraft:soul_sand",
+    "order": 2,
+    "impact": 2
+}
