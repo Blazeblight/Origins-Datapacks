@@ -1,0 +1,32 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "condition": {
+        "type": "origins:resource",
+        "resource": "underworld-warriors:heat",
+        "comparison": "==",
+        "compare_to": 0
+    },
+    "rising_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:give",
+                "stack": {
+                    "item": "minecraft:cobblestone",
+                    "amount": 128
+                }
+            },
+            {
+                "type": "origins:damage",
+                "amount": 2048,
+                "source": {
+                    "name": "freeze",
+                    "bypasses_armor": true,
+                    "unblockable": true
+                }
+            }
+        ]
+    }
+}

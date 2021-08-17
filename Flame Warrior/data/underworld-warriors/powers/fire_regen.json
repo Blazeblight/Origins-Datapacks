@@ -1,0 +1,13 @@
+{
+    "name": "Healing Flames",
+    "description": "You slowly heal when on fire.",
+    "type": "origins:action_over_time",
+    "condition": {
+        "type": "origins:on_fire"
+    },
+    "entity_action": {
+        "type": "origins:heal",
+        "amount": 0.1
+    },
+    "interval": 3
+}

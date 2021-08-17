@@ -1,0 +1,34 @@
+{
+    "name": "Crystallizing Armor",
+    "description": "When below 40% heat, you gain a small damage resistance and knockback resistance increase.",
+    "type": "origins:multiple",
+    "damage_resistance": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 2000
+        },
+        "modifier": {
+            "name": "Crystallizing Armor Damage Resistance",
+            "operation": "multiply_base",
+            "value": -0.1
+        }
+    },
+    "knockback_resistance": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 2000
+        },
+        "modifier": {
+            "name": "Crystallizing Armor Knockback Resistance",
+            "attribute": "minecraft:generic.knockback_resistance",
+            "operation": "addition",
+            "value": 0.1
+        }
+    }
+}

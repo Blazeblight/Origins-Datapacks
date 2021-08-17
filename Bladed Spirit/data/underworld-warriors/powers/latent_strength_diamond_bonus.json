@@ -1,0 +1,103 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "attributes": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                }
+            ]
+        },
+        "tick_rate": 4,
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    },
+    "damage_dealt": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 2
+        }
+    },
+    "regen": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:diamond_sword"
+                        }
+                    }
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 0.15
+        }
+    }
+}

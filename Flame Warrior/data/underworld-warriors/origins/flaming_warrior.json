@@ -1,0 +1,18 @@
+{
+    "name": "Flame Warrior",
+    "description": "With control over flames, the Flame Warrior can inflict heavy fire damage and set ablaze its targets and attackers.",
+    "icon": "minecraft:fire_charge",
+    "order": 2,
+    "impact": 1,
+    "powers": [
+        "underworld-warriors:flame_barrier",
+        "underworld-warriors:flaming_slashes",
+        "underworld-warriors:fire_immunity",
+        "underworld-warriors:fire_regen",
+        "underworld-warriors:water_weakness",
+        "underworld-warriors:weak_in_cold_biomes",
+        "origins:flame_particles",
+        "origins:damage_from_snowballs",
+        "origins:damage_from_potions"
+    ]
+}

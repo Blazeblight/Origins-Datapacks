@@ -1,0 +1,111 @@
+{
+    "name": "Magic-based Body",
+    "description": "Your body is formed from magical energies, making you slightly more resilient from magic attacks but significantly weaker from physical attacks.",
+    "type": "origins:multiple",
+    "magic_resilience": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "magic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "indirectMagic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "wither"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "witherSkull"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Resilient to magic damage",
+            "operation": "multiply_total",
+            "value": -0.2
+        }
+    },
+    "physical_vulnerability": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "anvil"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "arrow"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "cactus"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "cramming"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fallingBlock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fallingStalactile"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "generic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "mob"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "stalagmite"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "sweetBerryBush"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "thrown"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "trident"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Significantly weak to physical damage",
+            "operation": "multiply_total",
+            "value": 0.75
+        }
+    }
+}

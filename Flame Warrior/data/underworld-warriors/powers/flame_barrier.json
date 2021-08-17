@@ -1,0 +1,113 @@
+{
+    "name": "Flame Barrier",
+    "description": "You can channel your inner magic to create a temporary flaming barrier, reducing all damage you take by a significant amount and burning all attackers for 4 seconds.",
+    "type": "origins:multiple",
+    "duration": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 7,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "underworld-warriors:flame_barrier_duration",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "decay": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "change": -1
+        },
+        "interval": 1
+    },
+    "barrier": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Flame Barrier Block",
+            "operation": "multiply_base",
+            "value": -0.9
+        }
+    },
+    "return": {
+        "type": "origins:attacker_action_when_hit",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:damage",
+                    "amount": 5.0,
+                    "source": {
+                        "name": "onFire",
+                        "bypasses_armor": true,
+                        "fire": true
+                    }
+                },
+                {
+                    "type": "origins:set_on_fire",
+                    "duration": 4
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "visual_fire": {
+        "type": "origins:burn",
+        "interval": 20,
+        "burn_duration": 1,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "visual_color": {
+        "type": "origins:model_color",
+        "red": 0.9,
+        "green": 0.3,
+        "blue": 0.3,
+        "alpha": 1,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "activate": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:flame_barrier_duration",
+            "change": 200
+        },
+        "cooldown": 1200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 9
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "name": "Flaming Slashes",
+    "description": "Your melee attacks deal additional damage. This bonus damage is increased when using a sword. Additionally, you set your targets on fire when you are either on fire or on a hot biome.",
+    "type": "origins:multiple",
+    "base": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "name": "Flaming Slashes",
+            "operation": "addition",
+            "value": 1.0
+        }
+    },
+    "sword": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "fabric:swords"
+                }
+            }
+        },
+        "modifier": {
+            "name": "Flaming Slashes Sword Bonus",
+            "operation": "addition",
+            "value": 2.5
+        }
+    },
+    "burn": {
+        "type": "origins:target_action_on_hit",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:biome",
+                    "condition": {
+                        "type": "origins:temperature",
+                        "comparison": ">=",
+                        "compare_to": 2.0
+                    }
+                }
+            ]
+        },
+        "damage_condition": {
+            "type": "origins:projectile",
+            "inverted": true
+        },
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 4
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

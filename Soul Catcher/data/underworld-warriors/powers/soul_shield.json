@@ -1,0 +1,194 @@
+{
+    "name": "Soul Shielding",
+    "description": "You can power a shield that blocks up to 5 damage from all damage instances. The shield will depower the same amount as the damage blocked.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 15
+        }
+    },
+    "empower": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "underworld-warriors:soul_shield_resource",
+                    "change": 20
+                },
+                {
+                    "type": "origins:add_xp",
+                    "levels": -1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:xp_levels",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    "shield_block_5": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:amount",
+            "comparison": ">",
+            "compare_to": 4.0
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Soul Shielding",
+            "operation": "addition",
+            "value": -4
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "change": -4
+        }
+    },
+    "shield_block_4": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "comparison": "<=",
+                    "compare_to": 4.0
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">",
+                    "compare_to": 3.0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Soul Shielding",
+            "operation": "addition",
+            "value": -3
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "change": -3
+        }
+    },
+    "shield_block_3": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "comparison": "<=",
+                    "compare_to": 3.0
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">",
+                    "compare_to": 2.0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Soul Shielding",
+            "operation": "addition",
+            "value": -3
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "change": -3
+        }
+    },
+    "shield_block_2": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "comparison": "<=",
+                    "compare_to": 2.0
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">",
+                    "compare_to": 1.0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Soul Shielding",
+            "operation": "addition",
+            "value": -2
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "change": -2
+        }
+    },
+    "shield_block_1": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:amount",
+            "comparison": "<=",
+            "compare_to": 1.0
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "name": "Soul Shielding",
+            "operation": "addition",
+            "value": -1
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:soul_shield_resource",
+            "change": -1
+        }
+    }
+}
