@@ -22,7 +22,7 @@
             "bar_index": 14,
             "condition": {
                 "type": "origins:resource",
-                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "resource": "underworld-warriors:soulbound_sword_soul_strength",
                 "comparison": "<",
                 "compare_to": 100
             }
@@ -60,12 +60,12 @@
             },
             "if_action": {
                 "type": "origins:change_resource",
-                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "resource": "underworld-warriors:soulbound_sword_soul_strength",
                 "change": 1
             },
             "else_action": {
                 "type": "origins:change_resource",
-                "resource": "underworld_warriors:soulbound_sword_soul_strength",
+                "resource": "underworld-warriors:soulbound_sword_soul_strength",
                 "change": -2
             }
         }
@@ -74,7 +74,7 @@
         "type": "origins:action_on_callback",
         "entity_action_respawned": {
             "type": "origins:change_resource",
-            "resource": "underworld_warriors:soulbound_sword_soul_strength",
+            "resource": "underworld-warriors:soulbound_sword_soul_strength",
             "change": 100
         }
     },
@@ -90,7 +90,7 @@
         },
         "condition": {
             "type": "origins:resource",
-            "resource": "underworld_warriors:soulbound_sword_soul_strength",
+            "resource": "underworld-warriors:soulbound_sword_soul_strength",
             "comparison": "==",
             "compare_to": 0
         }
