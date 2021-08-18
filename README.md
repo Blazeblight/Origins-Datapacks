@@ -85,3 +85,31 @@ Impact: High
 - Ethereal Form (Toggled Ability): When not wearing any armor or holding anything, you can tap into the ethereal world, allowing you to phase through blocks and see the location of living entities. However, this slows you down by a noticeable amount. Can be toggled with the primary key.
     - Toggled with the primary key
     - -35% movement speed when active
+
+## In development
+
+## Ideas
+
+### Demonic Guardian
+
+Despite its size and appearance being similar to that of a regular human, the Demonic Guardian's otherworldly strength allows it to take out squads of warriors on its own.
+
+Impact: Low
+
+#### Abilities
+
+- Otherworldly Strength: You have more health and deal more damage than regular humans.
+- Physical Durability: Your body is enchanted with a protection spell, decreasing physical damage taken.
+- Speed Burst: [Primary] With a quick burst of energy, you can perform a quick dash to the same direction as your movement. This will not boost you to the air regardless of your vertical speed.
+- Elemental Weakness: Elemental attacks pierce through your protection spell, dealing significantly more damage.
+- Dense Body: Your body's increased mass makes you move slower and exhaust faster.
+
+### Void Watcher
+
+A construct of the abyss, sent to watch over reality.
+
+#### Abilities
+
+- Sentry's Veil (Active Ability): You can phase out of existence, rendering you invulnerable but immobile and preventing you from interacting with anything in the physical world.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you are looking at.
+- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally except when near the void.
