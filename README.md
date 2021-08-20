@@ -148,6 +148,7 @@ Fused with the power of another watcher, this construct of the abyss has been em
 - Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
 - Return to Home (Active Ability): You can teleport back to your domain. When leaving, you will be sent to your spawn point.
 - Blending Shadow: When in near-complete darkness, you can phase through blocks.
+- Blinding Light: Exposure to light blinds you.
 - Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a weaker physical endurance.
 - Out of Reach: When close to the void, it seeps through the ground, reforming your body.
 - Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
