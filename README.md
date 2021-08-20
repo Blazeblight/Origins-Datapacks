@@ -110,6 +110,45 @@ A construct of the abyss, sent to watch over reality.
 
 #### Abilities
 
-- Sentry's Veil (Active Ability): You can phase out of existence, rendering you invulnerable but immobile and preventing you from interacting with anything in the physical world.
-- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you are looking at.
-- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally except when near the void.
+- Sentry's Veil (Active Ability): You can phase out of existence, preventing others from interacting with you but preventing you from moving and interacting with the physical world.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Whispers of the Dark: You are able to see the locations of all nearby entities in near-complete darkness.
+- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+- Sacrifice to the Void: When returning to your home holding a powerful soul, it will be infused to your body, transforming you.
+
+#### Evolutions
+
+- Void Destroyer: Obtained by falling into the void while holding a nether star.
+- Void Scout: Obtained by falling into the void while holding an eye of ender.
+
+### Void Destroyer
+
+Fused with the power of the Wither, this construct of the abyss has been empowered to be more reliable in breaking the Void's enemies.
+
+#### Abilities
+
+- Lashing Tendrils (Active Ability): You can call onto the void's protection, rendering you immobile but granting you near-invulnerability. Enemies that attack you in this state are directly attacked by the void. However, staying in this state for too long will eventually consume your body.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Withering Attacks: Enemies you hit find their bodies slowly deteriorating.
+- Stronger Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a slightly weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+
+### Void Scout
+
+Fused with the power of another watcher, this construct of the abyss has been empowered to provide information to the Void.
+
+#### Abilities
+
+- Scout's Cloak (Active Ability): You can phase out of existence, rendering you invulnerable but unable to interact with the physical world.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Return to Home (Active Ability): You can teleport back to your domain. When leaving, you will be sent to your spawn point.
+- Blending Shadow: When in near-complete darkness, you can phase through blocks.
+- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
