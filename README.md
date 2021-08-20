@@ -153,3 +153,17 @@ Fused with the power of another watcher, this construct of the abyss has been em
 - Out of Reach: When close to the void, it seeps through the ground, reforming your body.
 - Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
 - Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+
+### Flame Warrior Rework
+
+With control over flames, the Flame Warrior can inflict heavy fire damage and set ablaze its targets and attackers.
+
+#### Abilities
+
+- Internal Flames (Ability Limit): You can tap into your internal magic, conjuring flames to aid you. These abilities consume your internal flames per use, but it can be recovered by dealing fire damage or by being on fire.
+- Fire Wave (Active Ability): With a flick, you can set the ground around you on fire. Entities inside the ability's range also take major fire damage.
+- Flame Barrier (Toggled Ability): You can channel your inner magic to create a temporary flaming barrier, reducing all damage you take by a significant amount and burning all attackers for 4 seconds.
+- Fire Immunity: You are immune to all forms of fire damage.
+- Warrior's Slashes: Your melee attacks deal additional damage. This bonus damage is increased when using a sword.
+- Magical Body: Your body has weaker endurance than regular humans. However, you also have increased magic resistance.
+- Severe Hydroasthenia: While water cannot outright kill you, it severely weakens you after a few seconds of contact.
