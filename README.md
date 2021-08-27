@@ -88,7 +88,46 @@ Impact: High
 
 ## In development
 
+### Omosapien
+
+A request by sarcasm#9689
+
+You are a small piece of a black hole fused with a player. Destroying anything you please.
+
+Status: In Creation
+
+#### Abilities
+
+- Because you have eaten so many things you explode when you die. (doesnt break any blocks but it does alot of damage)
+- You are immune to any type of projectile damage because it would just destroy itself when it made contact with you.
+- All hostile mobs are passive to you because they dont know what you are.
+- With your primary ability you can disintegrate any entity (except players and mob bosses, to players without armor it does 7 hearts) you look at like a bullet. Their particles linger around the place they died until it dissapears. When you kill an entity your energy bar and hunger goes up.
+- With your secondary ability you go to the dark dimension. You cannot interact with anything and nothing can interact with you. (you are invisible even with armor and you cant see any entities)(kinda just like the normal world but its a bit dark) You can phase through blocks no matter what in this dimension. However you can only stay in your dimension for 30 seconds at a time.
+- When your energy bar is halfay you have resistance 1. When its at maximum capacity you have strength 1 speed 2 and resistance 1
+- The higher your energy bars are the more armor bars you have.
+- entities get damaged when they hit you because their atoms disintegrate when they touch you. (damage equivalent to thorns 2)
+- Your skin is pitch black.
+- You cant eat ANY food
+- When your energy bar is empty you have weakness 2 nausea and slowness.
+- Your energy bar starts going down after 100 seconds of not disintegrating anything.
+- You only have 7 hearts.
+- Armor? What is that? (you cant wear armor)
+- Water Disintegrates you so it does as much damage as lava.
+
+#### Things to do
+
+- Create a better name(?)
+- Create a better description (?)
+- Add power names
+- Polish power descriptions
+- Finalize power effects
+- Create powers
+
 ## Ideas
+
+Note: Please DM me first if you wish to make some of these ideas for yourself. I will provide additional insights for the character design. Don't forget to credit me for the idea.
+
+Discord: Blazeblight#2950
 
 ### Demonic Guardian
 
@@ -167,3 +206,18 @@ With control over flames, the Flame Warrior can inflict heavy fire damage and se
 - Warrior's Slashes: Your melee attacks deal additional damage. This bonus damage is increased when using a sword.
 - Magical Body: Your body has weaker endurance than regular humans. However, you also have increased magic resistance.
 - Severe Hydroasthenia: While water cannot outright kill you, it severely weakens you after a few seconds of contact.
+
+### Mechanized Void
+
+The result of a fusion with metal, electricity, and the abyss. Despite apparent incompatibilities, the Mechanized Void remains persistent, allowing it to live through abuse that other Void entities would otherwise not survive.
+
+Currently an unfinished idea.
+
+#### Abilities
+
+- Void Internals (Neutral Trait): You have no need for food. However, you also cannot regenerate naturally.
+- Energy (New Mechanic): Your exoskeleton is powered by a separate electric power source. Doing things, including standing still, will decrease your energy. You can refill your energy by standing close to a heat source, as well as being in direct sunlight. When you run out of energy, your movement speed is significantly reduced and some abilities fail to work.
+- Rejected Entity (Negative Trait): When close to the Void, it lashes at you. While the bedrock protects you from direct hits, this disturbs your internal structure, slowing you down to prevent additional damage.
+- Withering Attacks (Passive Ability): Enemies you hit take additional damage after a while and are afflicted with Withering for a few seconds. This costs a small amount of energy.
+- Anaerobic (Positive Trait): You have no need for air.
+- Electrified Void  (Toggle Ability): You can electrify your insides by running high-voltage currents through your exoskeleton. This provides you with additional strength, increasing your speed and providing you with slight regeneration. Enemies attacking you will also take slight void damage.
