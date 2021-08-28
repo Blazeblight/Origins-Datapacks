@@ -85,3 +85,140 @@ Impact: High
 - Ethereal Form (Toggled Ability): When not wearing any armor or holding anything, you can tap into the ethereal world, allowing you to phase through blocks and see the location of living entities. However, this slows you down by a noticeable amount. Can be toggled with the primary key.
     - Toggled with the primary key
     - -35% movement speed when active
+
+### Singularity
+
+A request by sarcasm#9689
+
+The power of a black hole in the form of a human. Destruction follows you around.
+
+Note: At the request of sarcasm#9689, the datapack zip file is currently not available for download.
+
+#### Abilities
+
+- Devouring Maw (New Mechanic): You need to satiate your increased need for matter. You have a matter satiation meter that drops after a delay. Higher satiation values provide you with additional armor. When this is more than halfway full, you gain additional damage resistance. When this is completely full, you gain additional buffs.
+    - Minimum at 0, Maximum at 100, Starts at 10, Does not reset on death
+    - Drains 0.5 satiation every second after 100 seconds
+    - Gain 1 armor for every 5 satiation
+    - +20% damage resistance at 50 satiation and above
+    - +3 damage and +25% movement speed at 100 satiation (and above, but you can't really get there)
+    - -50% damage dealt and -50% movement speed at 0 satiation (and below, but you can't really get there)
+- Remote Disintegration (Active Ability): [Primary] You can use a destruction beam to destroy objects in front of you. Blocks hit by the beam are completely destroyed. Entities hit by the beam take damage. If this hits anything, you gain a small amount of hunger, saturation, and satiation.
+    - 10-second cooldown, 15-block range
+    - Deals Instant Damage II on entities hit. Undead Mobs take Instant Health II instead.
+    - Breaks blocks hit. Doesn't drop anything.
+    - Increases satiation by 8 and resets satiation decrease timer
+- Matter Explosion (Passive Ability): Due to your composition, you explode when you die. The blocks destroyed by your explosion are promptly replaced by whatever comes out of your body. Your items are destroyed with the resulting explosion.
+    - Does no terrain damage
+- Singularity Collapse (Active Ability): [Secondary] You can temporarily collapse yourself into a single point, preventing anything from interacting with you and you from interacting with anything. While this is active, you can phase through blocks. This form is unstable and as such, you automatically leave this state after a while to prevent yourself from taking damage.
+    - 30-second cooldown; 10-second duration; Can be cancelled by pressing the key again
+    - Gain phasing, invisibility, and invulnerability; You emit particles in the collapsed state
+    - Cannot use items
+    - Cannot break nor place blocks
+- Disruptive Form (Neutral Trait): Your form absorbs all light, making you appear pitch black. It is also very unstable, providing you with less health and destroying nearby projectiles. Entities that attack you also take damage return.
+    - -30% Max HP
+    - Immune to projectile damage
+    - Projectiles within 2 blocks are destroyed
+    - Attackers take 2 void damage
+- Non-solid Silhouette (Negative Trait): Due to your lack of substantial physical form, you cannot wear armor without disrupting your form.
+
+## In development
+
+## Ideas
+
+Note: Please DM me first if you wish to make some of these ideas for yourself. I will provide additional insights for the character design. Don't forget to credit me for the idea.
+
+Discord: Blazeblight#2950
+
+### Demonic Guardian
+
+Despite its size and appearance being similar to that of a regular human, the Demonic Guardian's otherworldly strength allows it to take out squads of warriors on its own.
+
+Impact: Low
+
+#### Abilities
+
+- Otherworldly Strength: You have more health and deal more damage than regular humans.
+- Physical Durability: Your body is enchanted with a protection spell, decreasing physical damage taken.
+- Speed Burst: [Primary] With a quick burst of energy, you can perform a quick dash to the same direction as your movement. This will not boost you to the air regardless of your vertical speed.
+- Elemental Weakness: Elemental attacks pierce through your protection spell, dealing significantly more damage.
+- Dense Body: Your body's increased mass makes you move slower and exhaust faster.
+
+### Void Watcher
+
+A construct of the abyss, sent to watch over reality.
+
+#### Abilities
+
+- Sentry's Veil (Active Ability): You can phase out of existence, preventing others from interacting with you but preventing you from moving and interacting with the physical world.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Whispers of the Dark: You are able to see the locations of all nearby entities in near-complete darkness.
+- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+- Sacrifice to the Void: When returning to your home holding a powerful soul, it will be infused to your body, transforming you.
+
+#### Evolutions
+
+- Void Destroyer: Obtained by falling into the void while holding a nether star.
+- Void Scout: Obtained by falling into the void while holding an eye of ender.
+
+### Void Destroyer
+
+Fused with the power of the Wither, this construct of the abyss has been empowered to be more reliable in breaking the Void's enemies.
+
+#### Abilities
+
+- Lashing Tendrils (Active Ability): You can call onto the void's protection, rendering you immobile but granting you near-invulnerability. Enemies that attack you in this state are directly attacked by the void. However, staying in this state for too long will eventually consume your body.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Withering Attacks: Enemies you hit find their bodies slowly deteriorating.
+- Stronger Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a slightly weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+
+### Void Scout
+
+Fused with the power of another watcher, this construct of the abyss has been empowered to provide information to the Void.
+
+#### Abilities
+
+- Scout's Cloak (Active Ability): You can phase out of existence, rendering you invulnerable but unable to interact with the physical world.
+- Void Movement (Active Ability): Dark smoke comes out of your body. After a few seconds, you will teleport towards the position you were looking at.
+- Return to Home (Active Ability): You can teleport back to your domain. When leaving, you will be sent to your spawn point.
+- Blending Shadow: When in near-complete darkness, you can phase through blocks.
+- Blinding Light: Exposure to light blinds you.
+- Void Form: You have no need for air nor sustenance. However, you also cannot regenerate naturally and have a weaker physical endurance.
+- Out of Reach: When close to the void, it seeps through the ground, reforming your body.
+- Paralyzing Heat: In a hot environment, you take minor fire damage, take additional damage, and become weaker as your form relies on the coldness of the void.
+- Fluid Interference: Water interferes with your internal form, dealing damage when in contact.
+
+### Flame Warrior Rework
+
+With control over flames, the Flame Warrior can inflict heavy fire damage and set ablaze its targets and attackers.
+
+#### Abilities
+
+- Internal Flames (Ability Limit): You can tap into your internal magic, conjuring flames to aid you. These abilities consume your internal flames per use, but it can be recovered by dealing fire damage or by being on fire.
+- Fire Wave (Active Ability): With a flick, you can set the ground around you on fire. Entities inside the ability's range also take major fire damage.
+- Flame Barrier (Toggled Ability): You can channel your inner magic to create a temporary flaming barrier, reducing all damage you take by a significant amount and burning all attackers for 4 seconds.
+- Fire Immunity: You are immune to all forms of fire damage.
+- Warrior's Slashes: Your melee attacks deal additional damage. This bonus damage is increased when using a sword.
+- Magical Body: Your body has weaker endurance than regular humans. However, you also have increased magic resistance.
+- Severe Hydroasthenia: While water cannot outright kill you, it severely weakens you after a few seconds of contact.
+
+### Mechanized Void
+
+The result of a fusion with metal, electricity, and the abyss. Despite apparent incompatibilities, the Mechanized Void remains persistent, allowing it to live through abuse that other Void entities would otherwise not survive.
+
+Currently an unfinished idea.
+
+#### Abilities
+
+- Void Internals (Neutral Trait): You have no need for food. However, you also cannot regenerate naturally.
+- Energy (New Mechanic): Your exoskeleton is powered by a separate electric power source. Doing things, including standing still, will decrease your energy. You can refill your energy by standing close to a heat source, as well as being in direct sunlight. When you run out of energy, your movement speed is significantly reduced and some abilities fail to work.
+- Rejected Entity (Negative Trait): When close to the Void, it lashes at you. While the bedrock protects you from direct hits, this disturbs your internal structure, slowing you down to prevent additional damage.
+- Withering Attacks (Passive Ability): Enemies you hit take additional damage after a while and are afflicted with Withering for a few seconds. This costs a small amount of energy.
+- Anaerobic (Positive Trait): You have no need for air.
+- Electrified Void  (Toggle Ability): You can electrify your insides by running high-voltage currents through your exoskeleton. This provides you with additional strength, increasing your speed and providing you with slight regeneration. Enemies attacking you will also take slight void damage.

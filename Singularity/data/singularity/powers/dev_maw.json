@@ -1,0 +1,418 @@
+{
+    "name": "Devouring Maw",
+    "description": "You need to satiate your increased need for matter. You have a matter satiation meter that drops after a delay. Higher satiation values provide you with additional armor. When this is more than halfway full, you gain additional damage resistance. When this is completely full, you gain additional buffs.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 10,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 0
+        }
+    },
+    "decay_cooldown_trigger_on_spawn": {
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:trigger_cooldown",
+            "power": "singularity:dev_maw_decay_cooldown"
+        },
+        "entity_action_chosen": {
+            "type": "origins:trigger_cooldown",
+            "power": "singularity:dev_maw_decay_cooldown"
+        }
+    },
+    "decay_cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 2000,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "decay_action": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_decay_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "singularity:dev_maw_resource",
+            "change": -2
+        }
+    },
+    "satiation_armor_01": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 5
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_02": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 10
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_03": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 15
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_04": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 20
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_05": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 25
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_06": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 30
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_07": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 35
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_08": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 40
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_09": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 45
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_10": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 50
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_11": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 55
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_12": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 60
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_13": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 65
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_14": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 70
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_15": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 75
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_16": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 80
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_17": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 85
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_18": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 90
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_19": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 95
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "satiation_armor_20": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 100
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "damage_resist_buff": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 50
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.2
+        }
+    },
+    "damage_buff": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 100
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 3
+        }
+    },
+    "speed_buff": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": ">=",
+            "compare_to": 100
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.25
+        }
+    },
+    "damage_debuff": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": "<=",
+            "compare_to": 0
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "speed_debuff": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:dev_maw_resource",
+            "comparison": "<=",
+            "compare_to": 0
+        },
+        "tick_rate": 2,
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Remote Disintegration",
+    "description": "You can use a destruction beam to destroy objects in front of you. Blocks hit by the beam are completely destroyed. Entities hit by the beam take damage. If this hits anything, you gain a small amount of hunger, saturation, and satiation.",
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "execute as @s at @s anchored eyes positioned ^ ^ ^ anchored feet run function devmaw_raycast:start_ray",
+        "permission_level": 4
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "bar_index": 24
+    }
+}

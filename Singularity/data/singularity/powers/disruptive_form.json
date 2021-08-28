@@ -1,0 +1,45 @@
+{
+    "name": "Disruptive Form",
+    "description": "Your form absorbs all light, making you appear pitch black. It is also very unstable, providing you with less health and destroying nearby projectiles. Entities that attack you also take damage return.",
+    "type": "origins:multiple",
+    "skin_color": {
+        "type": "origins:model_color",
+        "red": 0,
+        "green": 0,
+        "blue": 0
+    },
+    "health_debuff": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_total",
+            "value": -0.3
+        }
+    },
+    "projectile_intercept": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "kill @e[type=#minecraft:impact_projectiles,distance=..1.5]"
+        }
+    },
+    "projectile_immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    },
+    "damage_return": {
+        "type": "origins:attacker_action_when_hit",
+        "cooldown": 1,
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 2,
+            "source": {
+                "name": "outOfWorld",
+                "bypasses_armor": true
+            }
+        }
+    }
+}
