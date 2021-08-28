@@ -1,0 +1,243 @@
+{
+    "name": "Singularity Collapse",
+    "description": "You can temporarily collapse yourself into a single point, preventing anything from interacting with you and you from interacting with anything. While this is active, you can phase through blocks. This form is unstable and as such, you automatically leave this state after a while to prevent yourself from taking damage.",
+    "type": "origins:multiple",
+    "cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 18
+        }
+    },
+    "active": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "min_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "singularity:singularity_collapse_cooldown"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "singularity:singularity_collapse_duration",
+                    "change": 100
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "duration": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 100,
+        "min_action": {
+            "type": "origins:change_resource",
+            "resource": "singularity:singularity_collapse_active",
+            "change": -1
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "singularity:singularity_collapse_duration",
+                "comparison": "<",
+                "compare_to": 100
+            }
+        }
+    },
+    "activate": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "singularity:singularity_collapse_active",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "singularity:singularity_collapse_active",
+                "change": 1
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "singularity:singularity_collapse_active",
+                "change": -1
+            }
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "duration_decay": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "singularity:singularity_collapse_duration",
+            "change": -1
+        }
+    },
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "invul": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0
+        }
+    },
+    "phase": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        }
+    },
+    "particle_visual": {
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:squid_ink ~ ~1 ~ 0 0 0 0.1 1 force",
+            "permission_level": 4
+        }
+    },
+    "no_interact": {
+        "type": "origins:prevent_block_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "block_condition": {
+            "type": "origins:light_level",
+            "comparison": ">=",
+            "compare_to": 0
+        }
+    },
+    "no_item_use": {
+        "type": "origins:prevent_item_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "no_block_placement": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "gamemode adventure @s",
+            "permission_level": 4
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "gamemode survival @s",
+            "permission_level": 4
+        }
+    },
+    "no_damage": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "no_damage_projectile": {
+        "type": "origins:modify_projectile_damage",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "singularity:singularity_collapse_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

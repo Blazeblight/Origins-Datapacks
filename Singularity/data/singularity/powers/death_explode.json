@@ -1,0 +1,29 @@
+{
+    "name": "Matter Explosion",
+    "description": "Due to your composition, you explode when you die. The blocks destroyed by your explosion are promptly replaced by whatever comes out of your body.",
+    "type": "origins:action_over_time",
+    "condition": {
+        "type": "origins:health",
+        "comparison": "<=",
+        "compare_to": 0
+    },
+    "interval": 1,
+    "rising_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute at @s run function singularity:death_explode",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 2,
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "gamerule mobGriefing true"
+                }
+            }
+        ]
+    }
+}

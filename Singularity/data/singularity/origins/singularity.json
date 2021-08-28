@@ -1,0 +1,15 @@
+{
+    "name": "Singularity",
+    "description": "The power of a black hole in the form of a human. Destruction follows you around.",
+    "icon": "minecraft:black_concrete",
+    "order": 4,
+    "impact": 3,
+    "powers": [
+        "singularity:dev_maw",
+        "singularity:remote_disintegrate",
+        "singularity:singularity_collapse",
+        "singularity:death_explode",
+        "singularity:disruptive_form",
+        "singularity:no_armor"
+    ]
+}

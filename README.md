@@ -130,3 +130,40 @@ Impact: High
 - Ethereal Form (Toggled Ability): When not wearing any armor or holding anything, you can tap into the ethereal world, allowing you to phase through blocks and see the location of living entities. However, this slows you down by a noticeable amount. Can be toggled with the primary key.
     - Toggled with the primary key
     - -35% movement speed when active
+
+
+### Singularity
+
+A request by sarcasm#9689
+
+The power of a black hole in the form of a human. Destruction follows you around.
+
+Note: At the request of sarcasm#9689, the datapack zip file is currently not available for download.
+
+#### Abilities
+
+- Devouring Maw (New Mechanic): You need to satiate your increased need for matter. You have a matter satiation meter that drops after a delay. Higher satiation values provide you with additional armor. When this is more than halfway full, you gain additional damage resistance. When this is completely full, you gain additional buffs.
+    - Minimum at 0, Maximum at 100, Starts at 10, Does not reset on death
+    - Drains 0.5 satiation every second after 100 seconds
+    - Gain 1 armor for every 5 satiation
+    - +20% damage resistance at 50 satiation and above
+    - +3 damage and +25% movement speed at 100 satiation (and above, but you can't really get there)
+    - -50% damage dealt and -50% movement speed at 0 satiation (and below, but you can't really get there)
+- Remote Disintegration (Active Ability): [Primary] You can use a destruction beam to destroy objects in front of you. Blocks hit by the beam are completely destroyed. Entities hit by the beam take damage. If this hits anything, you gain a small amount of hunger, saturation, and satiation.
+    - 10-second cooldown, 15-block range
+    - Deals Instant Damage II on entities hit. Undead Mobs take Instant Health II instead.
+    - Breaks blocks hit. Doesn't drop anything.
+    - Increases satiation by 8 and resets satiation decrease timer
+- Matter Explosion (Passive Ability): Due to your composition, you explode when you die. The blocks destroyed by your explosion are promptly replaced by whatever comes out of your body. Your items are destroyed with the resulting explosion.
+    - Does no terrain damage
+- Singularity Collapse (Active Ability): [Secondary] You can temporarily collapse yourself into a single point, preventing anything from interacting with you and you from interacting with anything. While this is active, you can phase through blocks. This form is unstable and as such, you automatically leave this state after a while to prevent yourself from taking damage.
+    - 30-second cooldown; 10-second duration; Can be cancelled by pressing the key again
+    - Gain phasing, invisibility, and invulnerability; You emit particles in the collapsed state
+    - Cannot use items
+    - Cannot break nor place blocks
+- Disruptive Form (Neutral Trait): Your form absorbs all light, making you appear pitch black. It is also very unstable, providing you with less health and destroying nearby projectiles. Entities that attack you also take damage return.
+    - -30% Max HP
+    - Immune to projectile damage
+    - Projectiles within 2 blocks are destroyed
+    - Attackers take 2 void damage
+- Non-solid Silhouette (Negative Trait): Due to your lack of substantial physical form, you cannot wear armor without disrupting your form.
