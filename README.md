@@ -92,7 +92,7 @@ A request by sarcasm#9689
 
 The power of a black hole in the form of a human. Destruction follows you around.
 
-Status: In Creation
+Note: At the request of sarcasm#9689, the datapack zip file is currently not available for download.
 
 #### Abilities
 
