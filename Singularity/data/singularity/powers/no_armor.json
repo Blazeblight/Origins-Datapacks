@@ -1,0 +1,25 @@
+{
+    "name": "Non-solid Silhouette",
+    "description": "Due to your lack of substantial physical form, you cannot wear armor without disrupting your form.",
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "chest": {
+        "type": "origins:armor_value",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "legs": {
+        "type": "origins:armor_value",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "feet": {
+        "type": "origins:armor_value",
+        "comparison": ">=",
+        "compare_to": 1
+    }
+}

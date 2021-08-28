@@ -1,0 +1,1 @@
+execute if score #hit devmaw_hit matches 0 positioned ~-0.9 ~-0.9 ~-0.9 if entity @s[dx=0] positioned ~0.95 ~0.95 ~0.95 run function devmaw_raycast:hit_entity
