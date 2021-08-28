@@ -86,8 +86,6 @@ Impact: High
     - Toggled with the primary key
     - -35% movement speed when active
 
-## In development
-
 ### Singularity
 
 A request by sarcasm#9689
@@ -96,41 +94,35 @@ The power of a black hole in the form of a human. Destruction follows you around
 
 Status: In Creation
 
-#### Abilities (Draft)
-
-Checkboxes indicate abilities included in the final skill set.
-
-- [x] Because you have eaten so many things you explode when you die. (doesnt break any blocks but it does alot of damage)
-- [x] You are immune to any type of projectile damage because it would just destroy itself when it made contact with you.
-- [ ] All hostile mobs are passive to you because they dont know what you are.
-- [x] With your primary ability you can disintegrate any entity (except players and mob bosses, to players without armor it does 7 hearts) you look at like a bullet. Their particles linger around the place they died until it dissapears. When you kill an entity your energy bar and hunger goes up.
-- [x] With your secondary ability you go to the dark dimension. You cannot interact with anything and nothing can interact with you. (you are invisible even with armor and you cant see any entities)(kinda just like the normal world but its a bit dark) You can phase through blocks no matter what in this dimension. However you can only stay in your dimension for 30 seconds at a time.
-- [x] When your energy bar is halfay you have resistance 1. When its at maximum capacity you have strength 1 speed 2 and resistance 1
-- [x] The higher your energy bars are the more armor bars you have.
-- [x] entities get damaged when they hit you because their atoms disintegrate when they touch you. (damage equivalent to thorns 2)
-- [x] Your skin is pitch black.
-- [x] You cant eat ANY food
-- [x] When your energy bar is empty you have weakness 2 nausea and slowness.
-- [x] Your energy bar starts going down after 100 seconds of not disintegrating anything.
-- [x] You only have 7 hearts.
-- [x] Armor? What is that? (you cant wear armor)
-- [ ] Water Disintegrates you so it does as much damage as lava.
-
-#### Abilities (Final)
+#### Abilities
 
 - Devouring Maw (New Mechanic): You need to satiate your increased need for matter. You have a matter satiation meter that drops after a delay. Higher satiation values provide you with additional armor. When this is more than halfway full, you gain additional damage resistance. When this is completely full, you gain additional buffs.
-- Remote Disintegration (Active Ability): You can use a destruction beam to destroy objects in front of you. Blocks hit by the beam are completely destroyed. Entities hit by the beam take damage. If this hits anything, you gain a small amount of hunger, saturation, and satiation.
-- Matter Explosion (Passive Ability): Due to your composition, you explode when you die. The blocks destroyed by your explosion are promptly replaced by whatever comes out of your body.
-- Singularity Collapse (Active Ability): You can temporarily collapse yourself into a single point, preventing anything from interacting with you and you from interacting with anything. While this is active, you can phase through blocks. This form is unstable and as such, you automatically leave this state after a while to prevent yourself from taking damage.
+    - Minimum at 0, Maximum at 100, Starts at 10, Does not reset on death
+    - Drains 0.5 satiation every second after 100 seconds
+    - Gain 1 armor for every 5 satiation
+    - +20% damage resistance at 50 satiation and above
+    - +3 damage and +25% movement speed at 100 satiation (and above, but you can't really get there)
+    - -50% damage dealt and -50% movement speed at 0 satiation (and below, but you can't really get there)
+- Remote Disintegration (Active Ability): [Primary] You can use a destruction beam to destroy objects in front of you. Blocks hit by the beam are completely destroyed. Entities hit by the beam take damage. If this hits anything, you gain a small amount of hunger, saturation, and satiation.
+    - 10-second cooldown, 15-block range
+    - Deals Instant Damage II on entities hit. Undead Mobs take Instant Health II instead.
+    - Breaks blocks hit. Doesn't drop anything.
+    - Increases satiation by 8 and resets satiation decrease timer
+- Matter Explosion (Passive Ability): Due to your composition, you explode when you die. The blocks destroyed by your explosion are promptly replaced by whatever comes out of your body. Your items are destroyed with the resulting explosion.
+    - Does no terrain damage
+- Singularity Collapse (Active Ability): [Secondary] You can temporarily collapse yourself into a single point, preventing anything from interacting with you and you from interacting with anything. While this is active, you can phase through blocks. This form is unstable and as such, you automatically leave this state after a while to prevent yourself from taking damage.
+    - 30-second cooldown; 10-second duration; Can be cancelled by pressing the key again
+    - Gain phasing, invisibility, and invulnerability; You emit particles in the collapsed state
+    - Cannot use items
+    - Cannot break nor place blocks
 - Disruptive Form (Neutral Trait): Your form absorbs all light, making you appear pitch black. It is also very unstable, providing you with less health and destroying nearby projectiles. Entities that attack you also take damage return.
+    - -30% Max HP
+    - Immune to projectile damage
+    - Projectiles within 2 blocks are destroyed
+    - Attackers take 2 void damage
 - Non-solid Silhouette (Negative Trait): Due to your lack of substantial physical form, you cannot wear armor without disrupting your form.
 
-#### Things to do
-
-- Create a better name(?)
-- Create a better description (?)
-- Finalize powers
-- Create powers
+## In development
 
 ## Ideas
 
