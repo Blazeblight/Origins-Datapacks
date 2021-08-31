@@ -92,8 +92,6 @@ A request by sarcasm#9689
 
 The power of a black hole in the form of a human. Destruction follows you around.
 
-Note: At the request of sarcasm#9689, the datapack zip file is currently not available for download.
-
 #### Abilities
 
 - Devouring Maw (New Mechanic): You need to satiate your increased need for matter. You have a matter satiation meter that drops after a delay. Higher satiation values provide you with additional armor. When this is more than halfway full, you gain additional damage resistance. When this is completely full, you gain additional buffs.
