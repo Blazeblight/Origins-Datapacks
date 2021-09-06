@@ -46,17 +46,14 @@ Note: Will be released alongside Abyssal Robot. However, the Abyssal Robot devel
     - [x] Repair and durability bonus with netherite
     - [x] Prevent iron consumption on full durability
     - [x] Damage when broken
-- [ ] Implement Motion Sensor
-    - [ ] Entity Glow on nearby moving entities; Cannot work on targeted version
-    - [ ] Energy upkeep
 - [x] Implement Proximity Sensor
     - [x] Entity Glow
     - [x] Energy Upkeep
-- [ ] Implement Electric Pulse
-    - [ ] Damage nearby entities
-    - [ ] Energy cost
-    - [ ] Exoskeleton damage
-    - [ ] Particle Effects
+- [x] Implement Electric Pulse
+    - [x] Damage nearby entities
+    - [x] Energy cost
+    - [x] Exoskeleton damage
+    - [ ] Particle Effects (incomplete)
 - [ ] Implement Emergency Repairs
     - [ ] Invulnerability on final hit
     - [ ] Regeneration to max health

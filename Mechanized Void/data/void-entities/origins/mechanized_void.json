@@ -6,6 +6,7 @@
         "void-entities:energy",
         "void-entities:void_internals",
         "void-entities:rejected_entity",
+        "void-entities:electric_pulse",
         "void-entities:motion_sensor",
         "void-entities:uncompensated_weight",
         "void-entities:in_combat"
