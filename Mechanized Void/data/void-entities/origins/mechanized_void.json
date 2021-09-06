@@ -8,8 +8,7 @@
         "void-entities:rejected_entity",
         "void-entities:motion_sensor",
         "void-entities:uncompensated_weight",
-        "void-entities:in_combat",
-        "void-entities:tag_on_pick"
+        "void-entities:in_combat"
     ],
     "icon": "minecraft:air",
     "order": 10,
