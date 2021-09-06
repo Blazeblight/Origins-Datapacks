@@ -1,0 +1,1 @@
+tellraw @s {"text":"Emergency power deactivated. Please charge up main power source to a safe level before continuing.","color":"green"}

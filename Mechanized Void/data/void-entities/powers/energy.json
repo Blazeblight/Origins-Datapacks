@@ -23,11 +23,16 @@
         "min": 0,
         "max": 1,
         "start_value": 0,
+        "max_action": {
+            "type": "origins:execute_command",
+            "command": "function void-entities:emergency_power_alert",
+            "permission_level": 4
+        },
         "hud_render": {
             "should_render": false
         }
     },
-    "remove_drained":{
+    "remove_drained": {
         "type": "origins:action_over_time",
         "condition": {
             "type": "origins:resource",
@@ -36,10 +41,25 @@
             "compare_to": 409
         },
         "interval": 10,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "function void-entities:low_energy_warning",
+            "permission_level": 4
+        },
         "falling_action": {
-            "type": "origins:change_resource",
-            "resource": "*:*_drained",
-            "change": -1
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_drained",
+                    "change": -1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function void-entities:exit_emergency_power",
+                    "permission_level": 4
+                }
+            ]
         }
     },
     "move_slow_on_empty": {
