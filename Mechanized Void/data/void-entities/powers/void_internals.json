@@ -1,0 +1,38 @@
+{
+    "name": "Void Internals",
+    "description": "You have no need for food nor air. However, you also cannot regenerate naturally.",
+    "type": "origins:multiple",
+    "no_food_needed_exhaustion": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1.0
+        }
+    },
+    "no_food_needed_damage": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "starve"
+        }
+    },
+    "no_air_needed": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "drown"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inWall"
+                }
+            ]
+        }
+    },
+    "no_natural_regen": {
+        "type": "origins:disable_regen"
+    }
+}

@@ -1,0 +1,1 @@
+tellraw @s {"text":"WARNING!","bold":true,"color":"yellow","hoverEvent":{"action":"show_text","contents":{"text":"Repair your exoskeleton by using iron ingots."}},"extra":[{"text":"\nExoskeleton has taken severe damage. Please repair immediately.","bold":false,"hoverEvent":{"action":"show_text","contents":{"text":"Repair your exoskeleton by using iron ingots."}}}]}
