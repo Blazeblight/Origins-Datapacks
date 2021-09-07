@@ -7,7 +7,7 @@
 	},
 	"type": "origins:multiple",
 	"name": "Proximity Sensor",
-	"description": "You can see all nearby entities. Costs a significant amount of energy.",
+	"description": "[SaveToolbarActivator] You can see all nearby entities. Costs a significant amount of energy.",
 	"has_requirements": {
 		"type": "origins:resource",
 		"min": 0,

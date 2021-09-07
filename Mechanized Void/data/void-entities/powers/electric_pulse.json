@@ -1,6 +1,6 @@
 {
     "name": "Electric Pulse",
-    "description": "You can quickly blast a small electric pulse, damaging and slowing nearby entities. This consumes a fair amount of energy and damages your exoskeleton.",
+    "description": "[Primary] You can quickly blast a small electric pulse, damaging and slowing nearby entities. This consumes a fair amount of energy and damages your exoskeleton.",
     "type": "origins:multiple",
     "has_requirements": {
         "type": "origins:resource",
