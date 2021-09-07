@@ -53,7 +53,7 @@ Note: Will be released alongside Abyssal Robot. However, the Abyssal Robot devel
     - [x] Damage nearby entities
     - [x] Energy cost
     - [x] Exoskeleton damage
-    - [ ] Particle Effects (incomplete)
+    - [x] Particle Effects
 - [ ] Implement Emergency Repairs
     - [ ] Invulnerability on final hit
     - [ ] Regeneration to max health
