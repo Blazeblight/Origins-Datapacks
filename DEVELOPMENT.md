@@ -54,6 +54,10 @@ Note: Will be released alongside Abyssal Robot. However, the Abyssal Robot devel
     - [x] Energy cost
     - [x] Exoskeleton damage
     - [x] Particle Effects
+- [x] Implement Energy Siphon
+    - [x] Regen on key hold
+    - [x] Energy cost
+    - [x] Particle Effects
 - [ ] Implement Emergency Repairs
     - [ ] Invulnerability on final hit
     - [ ] Regeneration to max health

@@ -1425,12 +1425,18 @@
         "type": "origins:damage_over_time",
         "interval": 40,
         "onset_delay": 20,
-        "damage": 4,
+        "damage": 3,
         "damage_easy": 2,
         "damage_source": {
             "name": "wither",
             "bypasses_armor": true,
             "unblockable": true
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_is_active",
+            "comparison": "==",
+            "compare_to": 0
         }
     }
 }
