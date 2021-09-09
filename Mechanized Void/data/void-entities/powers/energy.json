@@ -47,19 +47,28 @@
             "permission_level": 4
         },
         "falling_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:change_resource",
-                    "resource": "*:*_drained",
-                    "change": -1
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "function void-entities:exit_emergency_power",
-                    "permission_level": 4
-                }
-            ]
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_drained",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_drained",
+                        "change": -1
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "function void-entities:exit_emergency_power",
+                        "permission_level": 4
+                    }
+                ]
+            }
         }
     },
     "move_slow_on_empty": {
