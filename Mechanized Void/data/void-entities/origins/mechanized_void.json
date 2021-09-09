@@ -11,8 +11,8 @@
         "void-entities:motion_sensor",
         "void-entities:uncompensated_weight",
         "void-entities:in_combat",
-        "void-entities:callbacks",
-        "void-entities:particle_holder"
+        "void-entities:mv_callbacks",
+        "void-entities:mv_particle_holder"
     ],
     "icon": "minecraft:air",
     "order": 10,
