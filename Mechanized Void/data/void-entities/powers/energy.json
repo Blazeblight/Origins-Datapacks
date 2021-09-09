@@ -38,7 +38,7 @@
             "type": "origins:resource",
             "resource": "*:*_resource",
             "comparison": "<",
-            "compare_to": 409
+            "compare_to": 819
         },
         "interval": 10,
         "rising_action": {

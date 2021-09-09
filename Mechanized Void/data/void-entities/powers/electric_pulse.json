@@ -15,7 +15,7 @@
         "type": "origins:action_over_time",
         "interval": 2,
         "condition": {
-            "type": "origins:and",
+            "type": "origins:or",
             "conditions": [
                 {
                     "type": "origins:resource",
