@@ -1,0 +1,228 @@
+{
+    "name": "Combat Mode",
+    "description": "[SaveToolbar] You can enter a combat-focused mode, boosting your damage, attack speed, and damage resistance. However, this increases your energy upkeep and slowly damages your exoskeleton due to accelerated wearing down.",
+    "type": "origins:multiple",
+    "has_requirements": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "requirement_update": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:energy_drained",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:exoskeleton_is_active",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_has_requirements",
+            "change": -1
+        },
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_has_requirements",
+            "change": 1
+        }
+    },
+    "is_active": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "remove_active_with_no_requirements": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_has_requirements",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_is_active",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_is_active",
+            "change": -1
+        }
+    },
+    "toggle_active": {
+        "type": "origins:active_self",
+        "cooldown": 1,
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_is_active",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_is_active",
+                        "change": 1
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "function void-entities:activate_combat_mode",
+                        "permission_level": 2
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_is_active",
+                        "change": -1
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "function void-entities:deactivate_combat_mode",
+                        "permission_level": 2
+                    }
+                ]
+            }
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "attributes": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_is_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "tick_rate": 1,
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "addition",
+                "value": 2.5
+            },
+            {
+                "attribute": "minecraft:generic.attack_speed",
+                "operation": "multiply_total",
+                "value": 0.25
+            }
+        ]
+    },
+    "damage_resist": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_is_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.2
+        }
+    },
+    "energy_upkeep": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_is_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:energy_resource",
+                    "change": -3
+                }
+            ]
+        }
+    },
+    "durability_upkeep": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_is_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_0",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_1",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_2",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_3",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_4",
+                    "change": -1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:exoskeleton_durability_5",
+                    "change": -1
+                }
+            ]
+        }
+    }
+}
