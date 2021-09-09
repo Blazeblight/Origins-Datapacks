@@ -102,7 +102,7 @@
     },
     "natural_degeneration": {
         "type": "origins:action_over_time",
-        "interval": 100,
+        "interval": 50,
         "entity_action": {
             "type": "origins:change_resource",
             "resource": "*:*_resource",
