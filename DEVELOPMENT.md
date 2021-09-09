@@ -64,9 +64,9 @@ Note: Will be released alongside Abyssal Robot. However, the Abyssal Robot devel
     - [x] Damage on finish
     - [x] Energy cost and exoskeleton damage
     - [x] Particle effects
-- [ ] Implement Combat Mode
-    - [ ] Attribute buffs
-    - [ ] Energy upkeep
-    - [ ] Exoskeleton damage
-- [ ] Balance Origin
+- [x] Implement Combat Mode
+    - [x] Attribute buffs
+    - [x] Energy upkeep
+    - [x] Exoskeleton damage
+- [ ] Balance Origin (Current Affairs)
 - [ ] Implement Evolution
