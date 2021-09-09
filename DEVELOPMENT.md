@@ -17,7 +17,7 @@ Note: Will be released alongside Abyssal Robot. However, the Abyssal Robot devel
 - Electric Pulse (Active Ability): [Primary] You can quickly blast a small electric pulse, damaging and slowing nearby entities. This consumes a fair amount of energy and damages your exoskeleton.
 - Energy Siphon (Active Ability): [Secondary] You can siphon the energy from your exoskeleton to recreate lost Void matter, healing you in the proces
 - Combat Mode (Toggled Ability): [SaveToolbar] You can enter a combat-focused mode, boosting your damage, attack speed, and damage resistance. However, this increases your energy upkeep and slowly damages your exoskeleton due to accelerated wearing down.
-- Proximity Sensor (Active Ability): [LoadToolbar] You can see all nearby entities. Costs a significant amount of energy.
+- Proximity Sensor (Toggled Ability): [LoadToolbar] You can see all nearby entities. Costs a significant amount of energy.
 - Rejected Entity (Minor Weakness): When close to the void, it lashes at you. While the bedrock can protect you from such attacks, your internal form becomes slightly dissonant with your exoskeleton, slowing you down by a small amount.
 - Uncompensated Weight (Weakness): Your exoskeleton cannot bear the additional weight of armor without wearing down. Leather armor will work fine, however. 
 
