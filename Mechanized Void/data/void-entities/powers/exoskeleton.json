@@ -1438,5 +1438,135 @@
             "comparison": "==",
             "compare_to": 0
         }
+    },
+    "emergency_repair": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "update_erepair": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_0",
+                            "comparison": ">=",
+                            "compare_to": 250
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 1
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_1",
+                            "comparison": ">=",
+                            "compare_to": 275
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 2
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_2",
+                            "comparison": ">=",
+                            "compare_to": 300
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 3
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_3",
+                            "comparison": ">=",
+                            "compare_to": 325
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 4
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_4",
+                            "comparison": ">=",
+                            "compare_to": 350
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_netherite_bonus",
+                            "comparison": "==",
+                            "compare_to": 5
+                        },
+                        {
+                            "type": "origins:resource",
+                            "resource": "*:*_durability_5",
+                            "comparison": ">=",
+                            "compare_to": 375
+                        }
+                    ]
+                }
+            ]
+        },
+        "rising_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_emergency_repair",
+            "change": 1
+        },
+        "falling_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_emergency_repair",
+            "change": -1
+        }
     }
 }

@@ -7,14 +7,6 @@
         {
             "id": "minecraft:lava_cauldron",
             "required": false
-        },
-        {
-            "id": "#minecraft:candle_cakes",
-            "required": false
-        },
-        {
-            "id": "#minecraft:candles",
-            "required": false
         }
     ]
 }

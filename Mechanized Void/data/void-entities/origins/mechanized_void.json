@@ -6,6 +6,7 @@
         "void-entities:energy",
         "void-entities:void_internals",
         "void-entities:rejected_entity",
+        "void-entities:emergency_repairs",
         "void-entities:electric_pulse",
         "void-entities:energy_siphon",
         "void-entities:motion_sensor",
