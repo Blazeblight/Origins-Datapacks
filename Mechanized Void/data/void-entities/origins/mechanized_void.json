@@ -10,6 +10,7 @@
         "void-entities:electric_pulse",
         "void-entities:energy_siphon",
         "void-entities:motion_sensor",
+        "void-entities:combat_mode",
         "void-entities:uncompensated_weight",
         "void-entities:in_combat",
         "void-entities:mv_callbacks",
