@@ -4,9 +4,13 @@
         "#minecraft:campfires",
         "#minecraft:fire",
         "minecraft:lava",
-        {
-            "id": "minecraft:lava_cauldron",
-            "required": false
-        }
+        "minecraft:lava_cauldron",
+        "minecraft:torch",
+        "minecraft:wall_torch",
+        "minecraft:soul_torch",
+        "minecraft:soul_wall_torch",
+        "#minecraft:candles",
+        "#minecraft:candle_cakes",
+        "minecraft:magma_block"
     ]
 }
