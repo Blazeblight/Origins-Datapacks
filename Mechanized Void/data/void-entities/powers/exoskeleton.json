@@ -1129,6 +1129,197 @@
                             {
                                 "type": "origins:change_resource",
                                 "resource": "*:*_durability_0",
+                                "change": 50
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_1",
+                                "change": 55
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_2",
+                                "change": 60
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_3",
+                                "change": 65
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_4",
+                                "change": 70
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_5",
+                                "change": 75
+                            }
+                        ]
+                    }
+                }
+            ],
+            "hud_render": {
+                "should_render": false
+            }
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "copper_repair": {
+        "type": "origins:active_self",
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:copper_ingot"
+                }
+            }
+        },
+        "key": {
+            "key": "key.use",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 0
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_0",
+                                        "comparison": "==",
+                                        "compare_to": 500
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 1
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_1",
+                                        "comparison": "==",
+                                        "compare_to": 550
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 2
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_2",
+                                        "comparison": "==",
+                                        "compare_to": 600
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 3
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_3",
+                                        "comparison": "==",
+                                        "compare_to": 650
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 4
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_4",
+                                        "comparison": "==",
+                                        "compare_to": 700
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_netherite_bonus",
+                                        "comparison": "==",
+                                        "compare_to": 5
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_durability_5",
+                                        "comparison": "==",
+                                        "compare_to": 750
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "tellraw @s {\"text\":\"Your exoskeleton is still fully repaired.\",\"color\":\"yellow\"}"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:constant",
+                        "value": true
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_durability_0",
                                 "change": 10
                             },
                             {
