@@ -7,7 +7,7 @@
         "actions": [
             {
                 "type": "origins:damage",
-                "amount": 2,
+                "amount": 8,
                 "source": {
                     "name": "lightningBolt",
                     "bypasses_armor": true,
