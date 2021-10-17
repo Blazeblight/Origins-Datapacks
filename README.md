@@ -1,4 +1,4 @@
-# Origins Datapacks for 1.17.1
+# Origins Datapacks
 
 These are datapacks designed for the Origins Mod. Check the releases for the downloadable zip files of the datapacks. 
 
@@ -52,7 +52,7 @@ Impact: Low
 - Flaming Slashes (Passive Ability): Your melee attacks deal additional damage. This bonus damage is increased when using a sword. Additionally, you set your targets on fire when you are either on fire or on a hot biome.
     - +1 melee damage
     - +2.5 sword damage (stacks with former bonus)
-- Fire Immunity (Buff): You are immune to all forms of fire damage.
+- Fire Immunity (Buff): Your affinity to fire renders you immune to fire damage.
 - Healing Flames (Passive Ability): You slowly heal when on fire.
     - +0.66 HP/s when on fire
 - Severe Hydroasthenia (Debuff): While water cannot outright kill you, it severely weakens you after a few seconds of contact.
@@ -65,7 +65,7 @@ Impact: Low
 
 From the burning oceans of the Underworld, the Lava Elemental can bring the burning wrath of its homeworld to its enemies.
 
-Available for 1.16.5+
+Available for 1.17.1+
 
 Impact: High
 
@@ -138,7 +138,7 @@ Impact: High
 - Ethereal Form (Toggled Ability): When not wearing any armor or holding anything, you can tap into the ethereal world, allowing you to phase through blocks and see the location of living entities. However, this slows you down by a noticeable amount. Can be toggled with the primary key.
     - Toggled with the primary key
     - -35% movement speed when active
-    
+
 ### Singularity
 
 A request by sarcasm#9689
