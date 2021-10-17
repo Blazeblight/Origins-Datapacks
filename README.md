@@ -167,6 +167,22 @@ Note: At the request of sarcasm#9689, the datapack zip file is currently not ava
     - Attackers take 2 void damage
 - Non-solid Silhouette (Negative Trait): Due to your lack of substantial physical form, you cannot wear armor without disrupting your form.
 
-## In development
+### Blighted Soul
 
-## Ideas
+Afflicted by a permanent curse, the Blighted Soul lives off of the lifeforce of other living beings by stealing their souls.
+*Note: This origin is incompatible with Origins 1.1.2 due to a bug that affects removal of Resource powers. A version that will workaround this bug might be coming. No promises though.*
+
+#### Abilities
+
+- Soul Sustenance (Passive Ability): You have no need for food. Instead, you are sustained by stealing the souls of other entities. Health regeneration is constant but reduces your stored souls.
+- Marked Target (Passive Ability): The last entity you hit will be marked for a few seconds. Most of your skills will only work on marked entities.
+- Ability Switch (New Mechanic): You can switch your active abilities with the Load Hotbar Activator and Save Hotbar Activator keys.
+- Soul Siphon (Active Ability): [Primary, Group 1] When in close proximity to a marked target, you can siphon part of their soul, reducing the damage they deal and sustaining you. The siphon becomes stronger the closer you are. Using this ability will remove the mark from the target.
+- Disturbance (Active Ability): [Secondary, Group 1] You ravage your marked target's soul, briefly disrupting its stability. Disturbed souls take more damage from attacks and are slowed for a few seconds. Using this ability will remove the mark on your target.
+- Ethereal Dash (Active Ability): [Primary, Group 2] You can perform a quick dash towards the direction you are looking at.
+- No Escape (Active Ability): [Secondary, Group 2] When far from your marked target, you can teleport behind your target. This will disable Soul Siphon for a few seconds.
+- Spectral Defense (Toggled Ability): [Primary, Group 3] You can power or depower a spectral shield, giving you a strong damage resistance when active. This can be toggled on even when not fully charged.
+- Boosted Regeneration (Toggled Ability): [Secondary, Group 3] You can boost your health regeneration. However, this will make it consume more Soul Sustenance.
+- Rotting Body (Major Debuff): Your body has been weakened by the curse, making you have less health, take more damage and knockback from physical attacks, and deal less damage.
+- Reform (Active Ability): [Primary, Group 4] With a full Soul Sustenance, you can increase your maximum health by half a heart. This is capped at 8 hearts.
+- Etherealize (Active Ability): [Secondary, Group 4] With a full Soul Sustenance, you can decrease the amount of damage you take from physical attacks. This is capped at +25%.
