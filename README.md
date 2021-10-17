@@ -130,7 +130,7 @@ Impact: High
 - Ethereal Form (Toggled Ability): When not wearing any armor or holding anything, you can tap into the ethereal world, allowing you to phase through blocks and see the location of living entities. However, this slows you down by a noticeable amount. Can be toggled with the primary key.
     - Toggled with the primary key
     - -35% movement speed when active
-
+    
 ### Singularity
 
 A request by sarcasm#9689
