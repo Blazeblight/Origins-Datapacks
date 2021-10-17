@@ -1,0 +1,71 @@
+{
+    "name": "Rigid Landmass",
+    "description": "When below 10% heat, you take significantly less damage and knockback. However, movement becomes severely limited, reducing movement speed, attack speed, and attack damage by a large amount. Lava also cannot properly circulate, preventing you from regenerating naturally.",
+    "type": "origins:multiple",
+    "attribute_change": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 500
+        },
+        "modifiers": [
+            {
+                "name": "Rigid Landmass Knockback Resistance",
+                "attribute": "minecraft:generic.knockback_resistance",
+                "operation": "addition",
+                "value": 0.75
+            },
+            {
+                "name": "Rigid Landmass Slow",
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_total",
+                "value": -0.7
+            },
+            {
+                "name": "Rigid Landmass Attack Slow",
+                "attribute": "minecraft:generic.attack_speed",
+                "operation": "multiply_total",
+                "value": -0.5
+            }
+        ]
+    },
+    "damage_penalty": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 500
+        },
+        "modifier": {
+            "name": "Rigid Landmass Attack Penalty",
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "damage_resist": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 500
+        },
+        "modifier": {
+            "name": "Rigid Landmass Damage Resistance",
+            "operation": "multiply_total",
+            "value": -0.8
+        }
+    },
+    "no_regen": {
+        "type": "origins:disable_regen",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": "<",
+            "compare_to": 500
+        }
+    }
+}

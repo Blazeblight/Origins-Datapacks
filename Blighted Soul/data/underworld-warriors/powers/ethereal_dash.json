@@ -1,0 +1,46 @@
+{
+    "name": "Ethereal Dash",
+    "description": "[Primary, Group 2] You can perform a quick dash towards the direction you are looking at.",
+    "type": "apoli:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "condition": {
+        "type": "apoli:and",
+        "conditions": [
+            {
+                "type": "apoli:resource",
+                "resource": "*:ability_switch_res",
+                "comparison": "==",
+                "compare_to": 2
+            },
+            {
+                "type": "apoli:resource",
+                "resource": "*:soul_sustain_res",
+                "comparison": ">=",
+                "compare_to": 2
+            }
+        ]
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 12
+    },
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:add_velocity",
+                "z": 2,
+                "space": "velocity_horizontal_normalized"
+            },
+            {
+                "type": "apoli:change_resource",
+                "resource": "*:soul_sustain_res",
+                "change": -2
+            }
+        ]
+    }
+}

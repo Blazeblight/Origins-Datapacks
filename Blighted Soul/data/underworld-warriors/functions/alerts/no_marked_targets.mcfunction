@@ -1,0 +1,1 @@
+tellraw @s {"text": "There is no nearby entity cursed by your attacks.","color": "red"}

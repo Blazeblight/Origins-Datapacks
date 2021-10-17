@@ -1,0 +1,25 @@
+{
+    "name": "Hot Movement",
+    "description": "When above 60% heat, you gain a small movement speed and attack speed increase.",
+    "type": "origins:conditioned_attribute",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "underworld-warriors:heat",
+        "comparison": ">",
+        "compare_to": 3000
+    },
+    "modifiers": [
+        {
+            "name": "Hot Movement MS Increase",
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.2
+        },
+        {
+            "name": "Hot Movement AS Increase",
+            "attribute": "minecraft:generic.attack_speed",
+            "operation": "multiply_base",
+            "value": 0.3
+        }
+    ]
+}

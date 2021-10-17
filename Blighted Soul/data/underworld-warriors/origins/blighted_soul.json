@@ -1,0 +1,24 @@
+{
+	"name": "Blighted Soul",
+	"description": "Afflicted by a permanent curse, the Blighted Soul lives off of the lifeforce of other living beings by stealing their souls.",
+	"powers": [
+		"underworld-warriors:soul_sustain",
+		"underworld-warriors:mark_target",
+		"underworld-warriors:see_marked",
+		"underworld-warriors:ability_switch",
+		"underworld-warriors:soul_siphon",
+		"underworld-warriors:soul_slow",
+		"underworld-warriors:ethereal_dash",
+		"underworld-warriors:no_escape",
+		"underworld-warriors:spectral_defense",
+		"underworld-warriors:regen_boost",
+		"underworld-warriors:rotting_body",
+		"underworld-warriors:body_reform",
+		"underworld-warriors:etherealize",
+		"underworld-warriors:health_upgrades",
+		"underworld-warriors:dmg_resist_upgrades"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"impact": 3,
+	"order": 10
+}

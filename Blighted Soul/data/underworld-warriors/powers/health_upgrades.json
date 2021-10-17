@@ -1,0 +1,125 @@
+{
+    "hidden": true,
+    "type": "apoli:multiple",
+    "res": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 8,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "health_1": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_2": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 1
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_3": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 2
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_4": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 3
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_5": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 4
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_6": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 5
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_7": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 6
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    },
+    "health_8": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_res",
+            "comparison": ">",
+            "compare_to": 7
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": 0.05
+        }
+    }
+}

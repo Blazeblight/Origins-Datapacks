@@ -1,0 +1,83 @@
+{
+    "name": "Blazing Titan",
+    "description": "When above 90% heat, you deal significantly more damage, move significantly faster, and have significantly higher health and regeneration. However, your extreme heat prevents you from wearing anything not made of netherite.",
+    "type": "origins:multiple",
+    "attributes": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": ">",
+            "compare_to": 4500
+        },
+        "tick_rate": 2,
+        "modifiers": [
+            {
+                "name": "Blazing Titan bonus health",
+                "attribute": "minecraft:generic.max_health",
+                "operation": "multiply_base",
+                "value": 2.0
+            },
+            {
+                "name": "Blazing Titan bonus speed",
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_base",
+                "value": 1.0
+            },
+            {
+                "name": "Blazing Titan bonus damage",
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "addition",
+                "value": 8.0
+            }
+        ]
+    },
+    "armor_restrict": {
+        "type": "origins:conditioned_restrict_armor",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": ">",
+            "compare_to": 4500
+        },
+        "tick_rate": 2,
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "underworld-warriors:blazing_titan_noarmor"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "underworld-warriors:blazing_titan_noarmor"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "underworld-warriors:blazing_titan_noarmor"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "underworld-warriors:blazing_titan_noarmor"
+            }
+        }
+    },
+    "healing": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "underworld-warriors:heat",
+            "comparison": ">",
+            "compare_to": 4500
+        },
+        "entity_action": {
+            "type": "origins:heal",
+            "amount": 1.0
+        }
+    }
+}

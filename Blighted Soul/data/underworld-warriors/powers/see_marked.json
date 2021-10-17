@@ -1,0 +1,8 @@
+{
+    "hidden": true,
+    "type": "apoli:entity_glow",
+    "entity_condition": {
+        "type": "apoli:power",
+        "power": "*:unbound/timed_mark"
+    }
+}

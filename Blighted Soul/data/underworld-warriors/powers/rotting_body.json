@@ -1,0 +1,42 @@
+{
+    "name": "Rotting Body",
+    "description": "Your body has been weakened by the curse, making you have less health, take more damage and knockback from physical attacks, and deal less melee damage.",
+    "type": "apoli:multiple",
+    "health_debuff": {
+        "type": "apoli:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "multiply_base",
+            "value": -0.6
+        },
+        "update_health": true
+    },
+    "melee_damage_debuff": {
+        "type": "apoli:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.75
+        }
+    },
+    "ranged_damage_debuff": {
+        "type": "apoli:modify_projectile_damage",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.75
+        }
+    },
+    "extra_knockback": {
+        "type": "origins:action_when_hit",
+        "bientity_action": {
+            "type": "origins:add_velocity",
+            "z": 0.5
+        }
+    },
+    "extra_damage": {
+        "type": "apoli:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    }
+}

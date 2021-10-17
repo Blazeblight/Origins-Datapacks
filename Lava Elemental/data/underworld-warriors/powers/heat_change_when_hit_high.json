@@ -1,0 +1,162 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "snowball_heat_decrease": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile": "minecraft:snowball"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3000
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": "<=",
+                    "compare_to": 4000
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 3
+        },
+        "self_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "underworld-warriors:heat",
+                    "change": -25
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.fire.extinguish"
+                }
+            ]
+        }
+    },
+    "fire_aspect_1_heat_increase": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:projectile",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:fire_aspect",
+                            "comparison": "==",
+                            "compare_to": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3000
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": "<=",
+                    "compare_to": 4000
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.15
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:heat",
+            "change": 5
+        }
+    },
+    "fire_aspect_2_heat_increase": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:projectile",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:fire_aspect",
+                            "comparison": "==",
+                            "compare_to": 2
+                        }
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3000
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": "<=",
+                    "compare_to": 4000
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        },
+        "self_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:heat",
+            "change": 10
+        }
+    },
+    "heavy_hit_heat_decrease": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:amount",
+            "comparison": ">=",
+            "compare_to": 5.5
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "underworld-warriors:heat",
+            "change": -10
+        },
+        "cooldown": 1
+    }
+}

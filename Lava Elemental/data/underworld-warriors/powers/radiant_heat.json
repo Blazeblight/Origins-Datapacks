@@ -1,0 +1,241 @@
+{
+    "name": "Radiant Heat",
+    "description": "When above 75% heat, you set the ground beneath you on fire. You also set entities near you on fire.",
+    "type": "origins:multiple",
+    "fire_walk": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3750
+                },
+                {
+                    "type": "origins:on_block"
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "underworld-warriors:non_full_blocks"
+                    },
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:empty"
+                        }
+                    }
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:block_action_at",
+            "block_action": {
+                "type": "origins:set_block",
+                "block": "minecraft:fire"
+            }
+        }
+    },
+    "burn_nearby_units": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3750
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "head",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_helmet"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "chest",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_chestplate"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "legs",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_leggings"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "feet",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_boots"
+                                }
+                            }
+                        }
+                    ],
+                    "inverted": true
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute as @e[type=!minecraft:item,type=!minecraft:experience_orb,distance=..8] run data modify entity @s Fire set value 100",
+            "permission_level": 4
+        }
+    },
+    "burn_on_hit": {
+        "type": "origins:target_action_on_hit",
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "head",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_helmet"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "chest",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_chestplate"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "legs",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_leggings"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "feet",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_boots"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3750
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 5
+        }
+    },
+    "burn_when_hit": {
+        "type": "origins:attacker_action_when_hit",
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "head",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_helmet"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "chest",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_chestplate"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "legs",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_leggings"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "feet",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "minecraft:netherite_boots"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "underworld-warriors:heat",
+                    "comparison": ">",
+                    "compare_to": 3750
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 5
+        }
+    }
+}

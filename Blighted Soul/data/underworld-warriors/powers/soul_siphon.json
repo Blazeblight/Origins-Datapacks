@@ -1,0 +1,73 @@
+{
+    "name": "Soul Siphon",
+    "description": "[Primary, Group 1] When in close proximity to a marked target, you can siphon part of their soul, reducing the damage they deal and sustaining you. The siphon becomes stronger the closer you are. Using this ability will remove the mark from the target.",
+    "type": "apoli:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "cooldown": 100,
+    "condition": {
+        "type": "apoli:resource",
+        "resource": "*:ability_switch_res",
+        "comparison": "==",
+        "compare_to": 1
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 10
+    },
+    "entity_action": {
+        "type": "apoli:if_else",
+        "condition": {
+            "type": "apoli:command",
+            "command": "execute if entity @e[tag=marked_by_blighted,distance=0.1..15]",
+            "permission_level": 2,
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "if_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "tag @s add siphon_source",
+                    "permission_level": 2
+                },
+                {
+                    "type": "apoli:execute_command",
+                    "command": "execute as @e[tag=marked_by_blighted,distance=0.1..15] at @s run function underworld-warriors:siphon_marked",
+                    "permission_level": 2
+                },
+                {
+                    "type": "apoli:delay",
+                    "ticks": 1,
+                    "action": {
+                        "type": "apoli:execute_command",
+                        "command": "tag @s remove siphon_source",
+                        "permission_level": 2
+                    }
+                }
+            ]
+        },
+        "else_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "function underworld-warriors:alerts/no_marked_targets",
+                    "permission_level": 2
+                },
+                {
+                    "type": "apoli:delay",
+                    "ticks": 1,
+                    "action": {
+                        "type": "apoli:set_resource",
+                        "resource": "*:*",
+                        "value": 100
+                    }
+                }
+            ]
+        }
+    }
+}

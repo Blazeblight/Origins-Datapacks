@@ -1,0 +1,13 @@
+{
+    "name": "Heat",
+    "description": "You have a new bar signaling your current heat. You die when it drops to the minimum. It slowly decreases in cold biomes and at night. Being on fire or submerged in lava increases heat at a significant rate. Being in contact with snow, water, or ice decreases heat massively. Certain damage sources also affect heat.",
+    "type": "origins:resource",
+    "min": 0,
+    "max": 5000,
+    "start_value": 2500,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 15
+    }
+}

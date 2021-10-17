@@ -1,0 +1,106 @@
+{
+    "name": "Soul Sustenance",
+    "description": "You have no need for food. Instead, you are sustained by stealing the souls of other entities. Health regeneration is constant but reduces your stored souls.",
+    "type": "apoli:multiple",
+    "res": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 250,
+        "start_value": 125,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 21
+        }
+    },
+    "no_regen": {
+        "type": "apoli:disable_regen"
+    },
+    "regen": {
+        "type": "apoli:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "apoli:and",
+            "conditions": [
+                {
+                    "type": "apoli:resource",
+                    "resource": "*:*_res",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "apoli:relative_health",
+                    "comparison": "<",
+                    "compare_to": 1.0
+                },
+                {
+                    "type": "apoli:resource",
+                    "resource": "*:regen_boost_active",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:heal",
+                    "amount": 0.25
+                },
+                {
+                    "type": "apoli:change_resource",
+                    "resource": "*:*_res",
+                    "change": -1
+                }
+            ]
+        }
+    },
+    "boosted_regen": {
+        "type": "apoli:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "apoli:and",
+            "conditions": [
+                {
+                    "type": "apoli:resource",
+                    "resource": "*:*_res",
+                    "comparison": ">",
+                    "compare_to": 2
+                },
+                {
+                    "type": "apoli:relative_health",
+                    "comparison": "<",
+                    "compare_to": 1.0
+                },
+                {
+                    "type": "apoli:resource",
+                    "resource": "*:regen_boost_active",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:heal",
+                    "amount": 0.50
+                },
+                {
+                    "type": "apoli:change_resource",
+                    "resource": "*:*_res",
+                    "change": -3
+                }
+            ]
+        }
+    },
+    "no_exhaust": {
+        "type": "apoli:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Etherealize",
+    "description": "[Secondary, Group 4] With a full Soul Sustenance, you can decrease the amount of damage you take from physical attacks. This is capped at +25%.",
+    "type": "apoli:active_self",
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "cooldown": 30000,
+    "condition": {
+        "type": "apoli:and",
+        "conditions": [
+            {
+                "type": "apoli:resource",
+                "resource": "*:soul_sustain_res",
+                "comparison": "==",
+                "compare_to": 250
+            },
+            {
+                "type": "apoli:resource",
+                "resource": "*:ability_switch_res",
+                "comparison": "==",
+                "compare_to": 4
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 18
+    },
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:change_resource",
+                "resource": "*:dmg_resist_upgrades_res",
+                "change": 1
+            },
+            {
+                "type": "apoli:change_resource",
+                "resource": "*:soul_sustain_res",
+                "change": -220
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "function underworld-warriors:flavor_text/upgrade_complete",
+                "permission_level": 2
+            }
+        ]
+    }
+}
