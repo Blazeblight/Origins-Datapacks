@@ -1,0 +1,51 @@
+{
+    "name": "Reform",
+    "description": "[Primary, Group 4] With a full Soul Sustenance, you can increase your maximum health by half a heart. This is capped at 8 hearts.",
+    "type": "apoli:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "cooldown": 6000,
+    "condition": {
+        "type": "apoli:and",
+        "conditions": [
+            {
+                "type": "apoli:resource",
+                "resource": "*:soul_sustain_res",
+                "comparison": "==",
+                "compare_to": 250
+            },
+            {
+                "type": "apoli:resource",
+                "resource": "*:ability_switch_res",
+                "comparison": "==",
+                "compare_to": 4
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 4
+    },
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:change_resource",
+                "resource": "*:health_upgrades_res",
+                "change": 1
+            },
+            {
+                "type": "apoli:change_resource",
+                "resource": "*:soul_sustain_res",
+                "change": -220
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "function underworld-warriors:flavor_text/upgrade_complete",
+                "permission_level": 2
+            }
+        ]
+    }
+}

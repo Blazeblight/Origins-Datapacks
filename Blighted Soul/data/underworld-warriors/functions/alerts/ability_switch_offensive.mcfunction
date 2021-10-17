@@ -1,0 +1,1 @@
+tellraw @s {"text": "Current abilities switched:\nPrimary: Soul Siphon\nSecondary: Disturbance","color": "green"}

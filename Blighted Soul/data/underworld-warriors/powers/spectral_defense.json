@@ -1,0 +1,159 @@
+{
+    "name": "Spectral Defense",
+    "description": "[Primary, Group 3] You can power or depower a spectral shield, giving you a strong damage resistance when active. This can be toggled on even when not fully charged.",
+    "type": "apoli:multiple",
+    "duration": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 0,
+            "condition": {
+                "type": "apoli:resource",
+                "resource": "*:*_duration",
+                "comparison": "<",
+                "compare_to": 600
+            }
+        }
+    },
+    "active": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "duration_change": {
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:if_else",
+            "condition": {
+                "type": "apoli:resource",
+                "resource": "*:*_active",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "apoli:change_resource",
+                "resource": "*:*_duration",
+                "change": 1
+            },
+            "else_action": {
+                "type": "apoli:change_resource",
+                "resource": "*:*_duration",
+                "change": -2
+            }
+        }
+    },
+    "toggle": {
+        "type": "apoli:active_self",
+        "cooldown": 1,
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:ability_switch_res",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "entity_action": {
+            "type": "apoli:if_else",
+            "condition": {
+                "type": "apoli:resource",
+                "resource": "*:*_active",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action": {
+                "type": "apoli:set_resource",
+                "resource": "*:*_active",
+                "value": 0
+            },
+            "else_action": {
+                "type": "apoli:set_resource",
+                "resource": "*:*_active",
+                "value": 1
+            }
+        }
+    },
+    "dmg_resist": {
+        "type": "apoli:modify_damage_taken",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.9
+        }
+    },
+    "visual": {
+        "type": "apoli:overlay",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "texture": "minecraft:textures/misc/nausea.png",
+        "strength": 0.50,
+        "red": 0,
+        "blue": 0.75,
+        "green": 0.25,
+        "draw_mode": "nausea",
+        "draw_phase": "below_hud",
+        "hide_with_hud": true,
+        "visible_in_third_person": true
+    },
+    "particles": {
+        "type": "apoli:particle",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_active",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "particle": "soul",
+        "frequency": 2
+    },
+    "model_color": {
+        "type": "apoli:model_color",
+        "red": 0.8,
+        "blue": 1,
+        "green": 0.8,
+        "alpha": 1,
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_active",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "remove_active_on_zero_duration": {
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_duration",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "rising_action": {
+            "type": "apoli:set_resource",
+            "resource": "*:*_active",
+            "value": 0
+        }
+    }
+}
