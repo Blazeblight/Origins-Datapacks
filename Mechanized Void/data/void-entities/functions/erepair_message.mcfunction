@@ -1,2 +1,0 @@
-tellraw @s {"text": "Not yet. The Void still calls you back.", "color": "black", "bold": true}
-tellraw @s {"text": "ALERT!","bold": true,"color": "red","extra": [{"text": "\nHeavy energy consumption detected! Please check power source for faults.","bold": false}]}

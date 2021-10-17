@@ -1,1 +1,0 @@
-tellraw @s {"text":"WARNING!","bold":true,"color":"yellow","hoverEvent":{"action":"show_text","contents":{"text":"You can recharge your power source by being in sunlight or being close to heat sources."}},"extra":[{"text":"\nEnergy is critically low. Please recharge immediately.","bold":false}]}
