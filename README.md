@@ -12,6 +12,8 @@ These are datapacks designed for the Origins Mod. Check the releases for the dow
 
 A master of soul manipulation, the Soul Catcher can absorb the lifeforce of living enemies and focus their soul to heal and protect their body from damage.
 
+Available for 1.16.5+
+
 Impact: Medium
 
 #### Abilities
@@ -34,6 +36,8 @@ Impact: Medium
 ### Flame Warrior
 
 With control over flames, the Flame Warrior can inflict heavy fire damage and set ablaze its targets and attackers.
+
+Available for 1.16.5+
 
 Impact: Low
 
@@ -60,6 +64,8 @@ Impact: Low
 ### Lava Elemental
 
 From the burning oceans of the Underworld, the Lava Elemental can bring the burning wrath of its homeworld to its enemies.
+
+Available for 1.16.5+
 
 Impact: High
 
@@ -106,6 +112,8 @@ Impact: High
 
 From the soul of a fallen warrior, this honorable spirit has found both respite and form with a familiar weapon.
 
+Available for 1.16.5+
+
 Impact: High
 
 #### Abilities
@@ -137,7 +145,7 @@ A request by sarcasm#9689
 
 The power of a black hole in the form of a human. Destruction follows you around.
 
-Note: At the request of sarcasm#9689, the datapack zip file is currently not available for download.
+Available for 1.16.5+
 
 #### Abilities
 
@@ -170,7 +178,11 @@ Note: At the request of sarcasm#9689, the datapack zip file is currently not ava
 ### Blighted Soul
 
 Afflicted by a permanent curse, the Blighted Soul lives off of the lifeforce of other living beings by stealing their souls.
+
+Available for 1.17.1+
+
 Requires Origins 1.1.0+
+
 *Note: This origin is incompatible with Origins 1.1.2 due to a bug that affects removal of Resource powers. A version that will work around this bug might be coming. No promises though.*
 
 #### Abilities
