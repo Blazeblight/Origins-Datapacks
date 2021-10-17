@@ -1,0 +1,328 @@
+{
+    "name": "Energy",
+    "description": "Your exoskeleton runs on a separate power source as it cannot fully harness Void energy. You slowly lose power over time and when using abilities. Being close to heat sources will slowly recharge your power. When out of power, you become significantly slower and will prevent some abilities from working.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 8192,
+        "start_value": 6144,
+        "min_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_drained",
+            "change": 1
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 2
+        }
+    },
+    "drained": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0,
+        "max_action": {
+            "type": "origins:execute_command",
+            "command": "function void-entities:emergency_power_alert",
+            "permission_level": 4
+        },
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "remove_drained": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": "<",
+            "compare_to": 819
+        },
+        "interval": 10,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "function void-entities:low_energy_warning",
+            "permission_level": 4
+        },
+        "falling_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_drained",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_drained",
+                        "change": -1
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "function void-entities:exit_emergency_power",
+                        "permission_level": 4
+                    }
+                ]
+            }
+        }
+    },
+    "move_slow_on_empty": {
+        "type": "origins:stacking_status_effect",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_drained",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "min_stacks": -2,
+        "max_stacks": 10,
+        "duration_per_stack": 10,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "amplifier": 1,
+                "is_ambient": true
+            },
+            {
+                "effect": "minecraft:mining_fatigue",
+                "amplifier": 1,
+                "is_ambient": true
+            }
+        ]
+    },
+    "attack_slow_on_empty": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_drained",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.attack_speed",
+            "operation": "multiply_total",
+            "value": -0.3
+        }
+    },
+    "natural_degeneration": {
+        "type": "origins:action_over_time",
+        "interval": 50,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": -1
+        }
+    },
+    "thermoelectric_generation": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 0
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 0
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 5
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 14
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 2
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 25
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 4
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 38
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 8
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 53
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 16
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 70
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 32
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 89
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 48
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 110
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 54
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 133
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 58
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:block_in_radius",
+                        "block_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "*:heat_sources"
+                        },
+                        "radius": 3,
+                        "shape": "cube",
+                        "comparison": "<=",
+                        "compare_to": 158
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_resource",
+                        "change": 60
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1 @@
+tellraw @s {"text": "You feel a cold breeze somewhere. Something feels off.", "color": "red", "hoverEvent": {"action": "show_text","contents": {"text": "You have been marked by a Blighted Soul.","color": "red"}}}

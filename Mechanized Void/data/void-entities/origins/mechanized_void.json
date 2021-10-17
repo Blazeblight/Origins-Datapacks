@@ -1,0 +1,22 @@
+{
+    "name": "Mechanized Void",
+    "description": "The result of a fusion with metal, electricity, and the abyss. Despite apparent incompatibilities, the Mechanized Void remains persistent, allowing it to live through abuse that other Void entities would otherwise not survive.",
+    "powers": [
+        "void-entities:exoskeleton",
+        "void-entities:energy",
+        "void-entities:void_internals",
+        "void-entities:rejected_entity",
+        "void-entities:emergency_repairs",
+        "void-entities:electric_pulse",
+        "void-entities:energy_siphon",
+        "void-entities:motion_sensor",
+        "void-entities:combat_mode",
+        "void-entities:uncompensated_weight",
+        "void-entities:in_combat",
+        "void-entities:mv_callbacks",
+        "void-entities:mv_particle_holder"
+    ],
+    "icon": "minecraft:iron_block",
+    "order": 10,
+    "impact": 3
+}

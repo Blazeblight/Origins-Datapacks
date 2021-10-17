@@ -1,0 +1,52 @@
+{
+    "hidden": true,
+    "type": "apoli:multiple",
+    "res": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 3,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "upgrade_1": {
+        "type": "apoli:modify_damage_taken",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_upgrade_1",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    },
+    "upgrade_2": {
+        "type": "apoli:modify_damage_taken",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_upgrade_1",
+            "comparison": ">",
+            "compare_to": 1
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    },
+    "upgrade_3": {
+        "type": "apoli:modify_damage_taken",
+        "condition": {
+            "type": "apoli:resource",
+            "resource": "*:*_upgrade_1",
+            "comparison": ">",
+            "compare_to": 2
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    }
+}

@@ -1,0 +1,2 @@
+execute as @e[tag=heal_particle,limit=1,sort=nearest] at @s run particle dust 0 0 0 2 ^ ^1 ^1 0 0 0 0 0 normal
+execute as @e[tag=heal_particle,limit=1,sort=nearest] at @s run particle dust 0 0 0 2 ^ ^1 ^-1 0 0 0 0 0 normal

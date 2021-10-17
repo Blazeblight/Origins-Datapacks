@@ -1,0 +1,48 @@
+{
+    "name": "Energy Siphon",
+    "description": "[Secondary] You can siphon the energy from your exoskeleton to recreate lost Void matter, healing you in the process. Does not get disabled by broken exoskeleton or emergency power.",
+    "type": "origins:active_self",
+    "cooldown": 2,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:relative_health",
+                "comparison": "<",
+                "compare_to": 1.0
+            },
+            {
+                "type": "origins:resource",
+                "resource": "*:energy_resource",
+                "comparison": ">=",
+                "compare_to": 4
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": true
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:heal",
+                "amount": 0.2
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:energy_resource",
+                "change": -2
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "function void-entities:heal_particles",
+                "permission_level": 2
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": false
+    }
+}

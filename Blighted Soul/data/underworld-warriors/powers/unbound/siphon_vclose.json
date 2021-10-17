@@ -1,0 +1,84 @@
+{
+    "type": "apoli:multiple",
+    "time": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 250,
+        "start_value": 250,
+        "min_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "function underworld-warriors:flavor_text/siphon_vclose_timeout",
+                    "permission_level": 2
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 10
+        }
+    },
+    "decay": {
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:change_resource",
+            "resource": "*:unbound/siphon_vclose_time",
+            "change": -1
+        }
+    },
+    "mob_damage_debuff": {
+        "type": "apoli:conditioned_attribute",
+        "condition": {
+            "type": "apoli:command",
+            "command": "execute if entity @s[type=!player]",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.attack_damage",
+            "operation": "multiply_total",
+            "value": -0.9
+        }
+    },
+    "damage_debuff_melee": {
+        "type": "apoli:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.9
+        }
+    },
+    "damage_debuff_range": {
+        "type": "apoli:modify_projectile_damage",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.9
+        }
+    },
+    "slow_damage": {
+        "type": "apoli:damage_over_time",
+        "interval": 10,
+        "onset_delay": 1,
+        "damage": 0.1,
+        "damage_source": {
+            "name": "player",
+            "unblockable": true,
+            "bypasses_armor": true
+        }
+    },
+    "overlay": {
+        "type": "apoli:overlay",
+        "texture": "minecraft:textures/misc/powder_snow_outline.png",
+        "strength": 1,
+        "red": 0,
+        "green": 0,
+        "blue": 0,
+        "draw_mode": "texture",
+        "draw_phase": "above_hud",
+        "hide_with_hud": false,
+        "visible_in_third_person": true
+    }
+}

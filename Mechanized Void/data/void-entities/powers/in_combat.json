@@ -1,0 +1,19 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:cooldown",
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "update": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 1,
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "*:*_timer"
+        }
+    }
+}

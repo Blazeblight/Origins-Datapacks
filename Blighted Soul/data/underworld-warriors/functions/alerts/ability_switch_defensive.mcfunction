@@ -1,0 +1,1 @@
+tellraw @s {"text": "Current abilities switched:\nPrimary: Spectral Defense\nSecondary: Boosted Regeneration","color": "green"}

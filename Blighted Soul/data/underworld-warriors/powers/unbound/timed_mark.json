@@ -1,0 +1,44 @@
+{
+    "hidden": true,
+    "type": "apoli:multiple",
+    "time": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 100,
+        "min_action": {
+            "type": "apoli:and",
+            "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "power revoke @s underworld-warriors:unbound/timed_mark underworld-warriors:blighted_soul_attack",
+                    "permission_level": 2
+                },
+                {
+                    "type": "apoli:execute_command",
+                    "command": "function underworld-warriors:alerts/mark_timed_out",
+                    "permission_level": 2
+                },
+                {
+                    "type": "apoli:execute_command",
+                    "command": "tag @s remove marked_by_blighted",
+                    "permission_level": 2
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        }
+    },
+    "decay": {
+        "type": "apoli:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "apoli:change_resource",
+            "resource": "*:unbound/timed_mark_time",
+            "change": -1
+        }
+    }
+}
