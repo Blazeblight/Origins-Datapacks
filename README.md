@@ -170,19 +170,86 @@ Note: At the request of sarcasm#9689, the datapack zip file is currently not ava
 ### Blighted Soul
 
 Afflicted by a permanent curse, the Blighted Soul lives off of the lifeforce of other living beings by stealing their souls.
-*Note: This origin is incompatible with Origins 1.1.2 due to a bug that affects removal of Resource powers. A version that will workaround this bug might be coming. No promises though.*
+Requires Origins 1.1.0+
+*Note: This origin is incompatible with Origins 1.1.2 due to a bug that affects removal of Resource powers. A version that will work around this bug might be coming. No promises though.*
 
 #### Abilities
 
 - Soul Sustenance (Passive Ability): You have no need for food. Instead, you are sustained by stealing the souls of other entities. Health regeneration is constant but reduces your stored souls.
+    - Minimum 0, Maximum 250, Starts at 125
+    - Regenerates 0.25 HP every second in exchange for 1 Soul Sustenance
 - Marked Target (Passive Ability): The last entity you hit will be marked for a few seconds. Most of your skills will only work on marked entities.
+    - Mark lasts for 5 seconds
+    - You can have multiple entities marked.
 - Ability Switch (New Mechanic): You can switch your active abilities with the Load Hotbar Activator and Save Hotbar Activator keys.
-- Soul Siphon (Active Ability): [Primary, Group 1] When in close proximity to a marked target, you can siphon part of their soul, reducing the damage they deal and sustaining you. The siphon becomes stronger the closer you are. Using this ability will remove the mark from the target.
+    - Group 1: Offensive Abilities
+    - Group 2: Movement Abilities
+    - Group 3: Defensive Abilities
+    - Group 4: Upgrades
+- Soul Siphon (Active Ability): [Primary, Group 1] When in close proximity to a marked target, you can siphon part of their soul, reducing the damage they deal and sustaining you. The siphon becomes stronger the closer you are. Using this ability will remove the mark from the target(s).
+    - Cooldown: 5 seconds
+    - Cooldown resets if the power fails.
+    - Fails if there is no marked entity within 15 blocks
+    - Can hit multiple entities at once.
+    - Weakens every 3 blocks of distance, up to a maximum range of 15 blocks
+    - 0-3 blocks
+        - Lasts 12.5 seconds
+        - -90% damage dealt
+        - Takes 0.1 damage every 0.5 seconds
+        - Increases Soul Sustenance for you by 10
+    - 3-6 blocks
+        - Lasts 10 seconds
+        - -75% damage dealt
+        - Increases Soul Sustenance for you by 8
+    - 6-9 blocks
+        - Lasts 7.5 seconds
+        - -50% damage dealt
+        - Increases Soul Sustenance for you by 5
+    - 9-12 blocks
+        - Lasts 6 seconds
+        - -30% damage dealt
+        - Increases Soul Sustenance for you by 1
+    - 12-15 blocks
+        - Lasts 4 seconds
+        - -15% damage dealt
 - Disturbance (Active Ability): [Secondary, Group 1] You ravage your marked target's soul, briefly disrupting its stability. Disturbed souls take more damage from attacks and are slowed for a few seconds. Using this ability will remove the mark on your target.
+    - Cooldown: 5 seconds
+    - Costs 5 Soul Sustenance
+    - Fails if there is no marked entity within 15 blocks
+    - Cooldown resets if the power fails
+    - Can hit multiple entities at once
+    - Debuff
+        - Lasts 10 seconds
+        - -25% movement speed
 - Ethereal Dash (Active Ability): [Primary, Group 2] You can perform a quick dash towards the direction you are looking at.
-- No Escape (Active Ability): [Secondary, Group 2] When far from your marked target, you can teleport behind your target. This will disable Soul Siphon for a few seconds.
+    - Cooldown: 10 seconds
+    - Costs 2 Soul Sustenance
+- No Escape (Active Ability): [Secondary, Group 2] When far from your marked target, you can teleport behind your target.
+    - Cooldown: 10 seconds
+    - Costs 10 Soul Sustenance
+    - Fails if the closest entity is within 15 blocks of you.
+    - Cooldown resets if the power fails
 - Spectral Defense (Toggled Ability): [Primary, Group 3] You can power or depower a spectral shield, giving you a strong damage resistance when active. This can be toggled on even when not fully charged.
+    - Lasts 30 seconds maximum
+    - Takes 60 seconds to recharge to maximum
+    - -90% damage taken
+        - Stacks multiplicatively after Rotting Body
+    - Character appears bluish and emits soul particles while this is active.
 - Boosted Regeneration (Toggled Ability): [Secondary, Group 3] You can boost your health regeneration. However, this will make it consume more Soul Sustenance.
-- Rotting Body (Major Debuff): Your body has been weakened by the curse, making you have less health, take more damage and knockback from physical attacks, and deal less damage.
-- Reform (Active Ability): [Primary, Group 4] With a full Soul Sustenance, you can increase your maximum health by half a heart. This is capped at 8 hearts.
+    - Regeneration is bumped to 0.50 HP every second in exchange of 3 Soul Sustenance
+- Rotting Body (Major Debuff): Your body has been weakened by the curse, making you have less health, take more damage and knockback, and deal less damage.
+    - -60% Max HP
+    - -75% damage dealt
+    - +100% damage taken
+- Reform (Active Ability): [Primary, Group 4] With a full Soul Sustenance, you can increase your maximum health. This is capped at 80%.
+    - Cooldown: 300 seconds
+    - Requires 250 Soul Sustenance
+    - Costs 220 Soul Sustenance
+    - Increases max HP by 5%
+        - Stacks additively with Rotting Body
 - Etherealize (Active Ability): [Secondary, Group 4] With a full Soul Sustenance, you can decrease the amount of damage you take from physical attacks. This is capped at +25%.
+    - Cooldown: 600 seconds
+    - Requires 250 Soul Sustenance
+    - Costs 220 Soul Sustenance
+    - Decreases damage taken by 25%
+        - Stacks additively with Rotting Body 
